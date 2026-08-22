@@ -21,7 +21,9 @@ public final class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         webView = new WebView(this);
-        webView.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_YES);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            webView.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_YES);
+        }
         setContentView(webView);
 
         CookieManager.getInstance().setAcceptCookie(true);
