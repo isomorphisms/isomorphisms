@@ -1,0 +1,3 @@
+# repository<TAB>branch
+# Infrastructure-only bridge: it builds another repository and is not analytic-continuation work.
+analytic-continuation	ci/group-explorer-pr1-apk

@@ -1,0 +1,83 @@
+name: Sync branch project boards
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/branch-project-sync.yml"
+      - ".github/branch-boards.tsv"
+      - ".github/branch-board-ignore.tsv"
+      - "bin/sync-branch-projects"
+      - "branch-project-boards.md"
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/branch-project-sync.yml"
+      - ".github/branch-boards.tsv"
+      - ".github/branch-board-ignore.tsv"
+      - "bin/sync-branch-projects"
+      - "branch-project-boards.md"
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Print intended mutations without changing Projects
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: branch-project-board-sync
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate synchronizer
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -n bin/sync-branch-projects
+          awk -F '\t' '
+            /^[[:space:]]*#/ || NF == 0 { next }
+            NF != 2 { print "branch-boards.tsv: expected two tab-separated fields at line " NR > "/dev/stderr"; bad=1 }
+            $1 != "Rusty Tool Shed" && $1 != "Math Toy Box" && $1 != "Playroom" {
+              print "branch-boards.tsv: unknown board at line " NR ": " $1 > "/dev/stderr"; bad=1
+            }
+            END { exit bad }
+          ' .github/branch-boards.tsv
+          duplicates="$(awk -F '\t' '!/^[[:space:]]*#/ && NF { print $2 }' .github/branch-boards.tsv | sort | uniq -d)"
+          if [[ -n "$duplicates" ]]; then
+            printf 'branch-boards.tsv: repositories mapped more than once:\n%s\n' "$duplicates" >&2
+            exit 1
+          fi
+          awk -F '\t' '
+            /^[[:space:]]*#/ || NF == 0 { next }
+            NF != 2 { print "branch-board-ignore.tsv: expected two tab-separated fields at line " NR > "/dev/stderr"; bad=1 }
+            END { exit bad }
+          ' .github/branch-board-ignore.tsv
+
+  sync:
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true && '1' || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require Projects token
+        shell: bash
+        run: |
+          if [[ -z "${GH_TOKEN:-}" ]]; then
+            echo "PROJECTS_TOKEN is not configured." >&2
+            echo "Add a classic PAT with project + repo scopes as this repository secret." >&2
+            exit 1
+          fi
+      - name: Synchronize live branches
+        shell: bash
+        run: ./bin/sync-branch-projects
