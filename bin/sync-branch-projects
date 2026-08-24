@@ -1,0 +1,289 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+OWNER="${BRANCH_BOARD_OWNER:-isomorphisms}"
+CONFIG="${BRANCH_BOARD_CONFIG:-.github/branch-boards.tsv}"
+IGNORE="${BRANCH_BOARD_IGNORE:-.github/branch-board-ignore.tsv}"
+DRY_RUN="${DRY_RUN:-0}"
+BOARDS=("Rusty Tool Shed" "Math Toy Box" "Playroom")
+
+fail() {
+  printf 'error: %s\n' "$*" >&2
+  exit 1
+}
+
+note() {
+  printf '%s\n' "$*" >&2
+}
+
+need() {
+  command -v "$1" >/dev/null 2>&1 || fail "missing command: $1"
+}
+
+need gh
+need jq
+[[ -n "${GH_TOKEN:-}" ]] || fail "GH_TOKEN is required (use a token with GitHub Projects write access)"
+[[ -f "$CONFIG" ]] || fail "missing config: $CONFIG"
+
+is_ignored() {
+  local repo="$1" branch="$2"
+  [[ -f "$IGNORE" ]] || return 1
+  awk -F '\t' -v repo="$repo" -v branch="$branch" '
+    /^[[:space:]]*#/ || NF < 2 { next }
+    $1 == repo && $2 == branch { found = 1 }
+    END { exit(found ? 0 : 1) }
+  ' "$IGNORE"
+}
+
+project_id_for_title() {
+  local title="$1" response
+  response="$(gh api graphql \
+    -f query='query($login:String!) {
+      user(login:$login) {
+        projectsV2(first:100) { nodes { id title } }
+      }
+    }' \
+    -f login="$OWNER")"
+  jq -r --arg title "$title" '.data.user.projectsV2.nodes[] | select(.title == $title) | .id' <<<"$response" | head -n 1
+}
+
+list_project_drafts() {
+  local project_id="$1" cursor='' response
+  while :; do
+    if [[ -n "$cursor" ]]; then
+      response="$(gh api graphql \
+        -f query='query($project:ID!, $cursor:String) {
+          node(id:$project) {
+            ... on ProjectV2 {
+              items(first:100, after:$cursor) {
+                nodes {
+                  id
+                  content {
+                    __typename
+                    ... on DraftIssue { id title body }
+                  }
+                }
+                pageInfo { hasNextPage endCursor }
+              }
+            }
+          }
+        }' \
+        -f project="$project_id" \
+        -f cursor="$cursor")"
+    else
+      response="$(gh api graphql \
+        -f query='query($project:ID!, $cursor:String) {
+          node(id:$project) {
+            ... on ProjectV2 {
+              items(first:100, after:$cursor) {
+                nodes {
+                  id
+                  content {
+                    __typename
+                    ... on DraftIssue { id title body }
+                  }
+                }
+                pageInfo { hasNextPage endCursor }
+              }
+            }
+          }
+        }' \
+        -f project="$project_id")"
+    fi
+
+    jq -c '.data.node.items.nodes[]
+      | select(.content.__typename == "DraftIssue")
+      | {item_id:.id, draft_id:.content.id, title:.content.title, body:(.content.body // "")}' <<<"$response"
+
+    [[ "$(jq -r '.data.node.items.pageInfo.hasNextPage' <<<"$response")" == "true" ]] || break
+    cursor="$(jq -r '.data.node.items.pageInfo.endCursor' <<<"$response")"
+  done
+}
+
+branch_ci_state() {
+  local repo="$1" branch="$2" response
+  response="$(gh api graphql \
+    -f query='query($owner:String!, $name:String!, $ref:String!) {
+      repository(owner:$owner, name:$name) {
+        ref(qualifiedName:$ref) {
+          target {
+            ... on Commit {
+              statusCheckRollup { state }
+            }
+          }
+        }
+      }
+    }' \
+    -f owner="$OWNER" \
+    -f name="$repo" \
+    -f ref="refs/heads/$branch" 2>/dev/null || true)"
+  if [[ -z "$response" ]]; then
+    printf 'UNKNOWN\n'
+  else
+    jq -r '.data.repository.ref.target.statusCheckRollup.state // "NO CHECKS"' <<<"$response"
+  fi
+}
+
+branch_pr_text() {
+  local repo="$1" branch="$2" response
+  response="$(gh api --method GET "repos/$OWNER/$repo/pulls" \
+    -f state=open \
+    -f head="$OWNER:$branch" \
+    -F per_page=20 2>/dev/null || printf '[]')"
+  jq -r '
+    if length == 0 then "none"
+    else map("[#\(.number) \(.title)](\(.html_url))" + (if .draft then " · draft" else " · open" end)) | join("<br>")
+    end
+  ' <<<"$response"
+}
+
+branch_is_unmerged() {
+  local repo="$1" default="$2" branch="$3"
+  local default_q branch_q response ahead
+  default_q="$(jq -rn --arg v "$default" '$v|@uri')"
+  branch_q="$(jq -rn --arg v "$branch" '$v|@uri')"
+  if ! response="$(gh api "repos/$OWNER/$repo/compare/$default_q...$branch_q" 2>/dev/null)"; then
+    note "warning: compare failed for $repo:$branch; keeping it rather than deleting real work"
+    return 0
+  fi
+  ahead="$(jq -r '.ahead_by // 0' <<<"$response")"
+  (( ahead > 0 ))
+}
+
+managed_key_from_body() {
+  local body="$1"
+  sed -n 's/.*<!-- branch-board-key:\([^ ]*\) -->.*/\1/p' <<<"$body" | head -n 1
+}
+
+build_body() {
+  local repo="$1" branch="$2" sha="$3" pr="$4" ci="$5" key="$6"
+  local short_sha="${sha:0:12}"
+  cat <<BODY
+<!-- branch-board-key:$key -->
+**Repository:** [$OWNER/$repo](https://github.com/$OWNER/$repo)  
+**Branch:** [$branch](https://github.com/$OWNER/$repo/tree/$branch)  
+**Head:** [$short_sha](https://github.com/$OWNER/$repo/commit/$sha)  
+**PR:** $pr  
+**CI:** $ci
+
+Managed from the live branch. Delete/merge the branch, or list it in \`.github/branch-board-ignore.tsv\`, to remove this card.
+BODY
+}
+
+update_draft() {
+  local draft_id="$1" title="$2" body="$3"
+  if [[ "$DRY_RUN" == "1" ]]; then
+    note "DRY RUN update $title"
+    return
+  fi
+  gh api graphql \
+    -f query='mutation($draft:ID!, $title:String!, $body:String!) {
+      updateProjectV2DraftIssue(input:{draftIssueId:$draft, title:$title, body:$body}) {
+        draftIssue { id }
+      }
+    }' \
+    -f draft="$draft_id" \
+    -f title="$title" \
+    -f body="$body" >/dev/null
+}
+
+add_draft() {
+  local project_id="$1" title="$2" body="$3"
+  if [[ "$DRY_RUN" == "1" ]]; then
+    note "DRY RUN add $title"
+    return
+  fi
+  gh api graphql \
+    -f query='mutation($project:ID!, $title:String!, $body:String!) {
+      addProjectV2DraftIssue(input:{projectId:$project, title:$title, body:$body}) {
+        projectItem { id }
+      }
+    }' \
+    -f project="$project_id" \
+    -f title="$title" \
+    -f body="$body" >/dev/null
+}
+
+delete_item() {
+  local project_id="$1" item_id="$2" key="$3"
+  if [[ "$DRY_RUN" == "1" ]]; then
+    note "DRY RUN delete $key"
+    return
+  fi
+  gh api graphql \
+    -f query='mutation($project:ID!, $item:ID!) {
+      deleteProjectV2Item(input:{projectId:$project, itemId:$item}) { deletedItemId }
+    }' \
+    -f project="$project_id" \
+    -f item="$item_id" >/dev/null
+}
+
+sync_board() {
+  local board="$1" project_id repo default branch sha key title pr ci body item_json existing_key
+  project_id="$(project_id_for_title "$board")"
+  [[ -n "$project_id" ]] || fail "user project not found: $board"
+  note "syncing $board"
+
+  declare -A desired_title=()
+  declare -A desired_body=()
+  declare -A existing_item=()
+  declare -A existing_draft=()
+  declare -A existing_title=()
+  declare -A existing_body=()
+
+  while IFS=$'\t' read -r mapped_board repo; do
+    [[ -n "${mapped_board:-}" && "${mapped_board:0:1}" != "#" ]] || continue
+    [[ "$mapped_board" == "$board" ]] || continue
+    [[ -n "${repo:-}" ]] || continue
+
+    if ! default="$(gh api "repos/$OWNER/$repo" --jq '.default_branch' 2>/dev/null)"; then
+      note "warning: mapped repository not found or unreadable: $OWNER/$repo"
+      continue
+    fi
+
+    while IFS=$'\t' read -r branch sha; do
+      [[ -n "$branch" && "$branch" != "$default" ]] || continue
+      is_ignored "$repo" "$branch" && continue
+      branch_is_unmerged "$repo" "$default" "$branch" || continue
+
+      key="$OWNER/$repo@$branch"
+      title="$repo — $branch"
+      pr="$(branch_pr_text "$repo" "$branch")"
+      ci="$(branch_ci_state "$repo" "$branch")"
+      body="$(build_body "$repo" "$branch" "$sha" "$pr" "$ci" "$key")"
+      desired_title["$key"]="$title"
+      desired_body["$key"]="$body"
+    done < <(gh api --paginate "repos/$OWNER/$repo/branches?per_page=100" --jq '.[] | [.name, .commit.sha] | @tsv')
+  done < "$CONFIG"
+
+  while IFS= read -r item_json; do
+    [[ -n "$item_json" ]] || continue
+    existing_key="$(managed_key_from_body "$(jq -r '.body' <<<"$item_json")")"
+    [[ -n "$existing_key" ]] || continue
+    existing_item["$existing_key"]="$(jq -r '.item_id' <<<"$item_json")"
+    existing_draft["$existing_key"]="$(jq -r '.draft_id' <<<"$item_json")"
+    existing_title["$existing_key"]="$(jq -r '.title' <<<"$item_json")"
+    existing_body["$existing_key"]="$(jq -r '.body' <<<"$item_json")"
+  done < <(list_project_drafts "$project_id")
+
+  for key in "${!desired_title[@]}"; do
+    if [[ -n "${existing_item[$key]:-}" ]]; then
+      if [[ "${existing_title[$key]}" != "${desired_title[$key]}" || "${existing_body[$key]}" != "${desired_body[$key]}" ]]; then
+        update_draft "${existing_draft[$key]}" "${desired_title[$key]}" "${desired_body[$key]}"
+      fi
+    else
+      add_draft "$project_id" "${desired_title[$key]}" "${desired_body[$key]}"
+    fi
+  done
+
+  for key in "${!existing_item[@]}"; do
+    [[ -n "${desired_title[$key]:-}" ]] && continue
+    delete_item "$project_id" "${existing_item[$key]}" "$key"
+  done
+
+  note "$board: ${#desired_title[@]} live branch cards"
+}
+
+for board in "${BOARDS[@]}"; do
+  sync_board "$board"
+done
