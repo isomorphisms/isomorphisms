@@ -1,6 +1,6 @@
-# Small useful software
+# Lots of useful command-line utilities, lots of useful phone utilities — all free
 
-Some software should simply be cheap enough to give away.
+The factory should be able to turn out lots of small, obvious, useful software quickly, correctly, and inspectably. These programs are useful products in their own right and acceptance tests for the factory. They should be free.
 
 A flashlight. A spirit level. A Unicode picker. A text pad. A tiny statistics program. A price lookup. A shopper app for a neighborhood store.
 

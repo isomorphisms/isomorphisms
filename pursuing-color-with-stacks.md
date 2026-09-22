@@ -216,7 +216,7 @@ A system that carries provenance may make verification cheaper.
 
 If those effects are real, they could reduce the amount of computation required to get from a request to an accepted result.
 
-That would connect this speculative mathematics to the same concern described in [Trying not to melt the polar ice caps](../trying-not-to-melt-the-polar-ice-caps/): reducing computation per useful result.
+That would connect this speculative mathematics to the same concern described in [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md): reducing computation per useful result.
 
 But this is several hypotheses downstream from anything established.
 
