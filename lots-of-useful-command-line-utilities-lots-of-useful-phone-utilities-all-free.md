@@ -118,6 +118,53 @@ A statistics program forces us to care about:
 
 Those are precisely the boundaries a readable systems language should handle well.
 
+## Build the machine's reference set before building the client
+
+A useful pattern for small API programs is to make the documentation itself part of the factory.
+
+Do not begin by asking a model to remember an API from training.
+
+Instead:
+
+~~~text
+exact upstream API / specification
+    → local pinned mirror
+    → machine-oriented second-pass notes
+    → collected external code examples
+    → fixtures and boundary tests
+    → implementation
+~~~
+
+[iGPT](https://github.com/isomorphisms/iGPT) already follows the first half of this pattern for the OpenAI developer API.
+
+It keeps an exact pinned OpenAPI mirror as the normative source and a separate machine-oriented review that records the operational implications without pretending the notes replace the specification.
+
+The next useful step is cheap: collect code examples that exercise the same API or operating-system surface.
+
+Some examples will be good.
+
+Some will be obsolete.
+
+Some will contain an idea worth stealing and an architecture worth rejecting.
+
+Disk space is cheap.
+
+The important thing is to retain provenance and keep the examples distinguishable from the normative API contract.
+
+Then an agent working on a client has a local reference set:
+
+~~~text
+what the API actually says
+what we think it means
+how other people used it
+what our fixtures require
+what remains undecided
+~~~
+
+That is a much better starting point for an intelligent programming conversation than repeatedly asking a model to reconstruct the whole ecosystem from memory.
+
+The pattern generalizes to Android APIs, libc/Bionic interfaces, file formats, device interfaces, web services, and the other small boundaries the app factory keeps encountering.
+
 ## Small command-line programs
 
 [Idriç CLI](https://github.com/isomorphisms/idric-cli) collects small command-line programs around real services and data sources.
