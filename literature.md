@@ -1,4 +1,4 @@
-# Great literature on your phone
+# literature on your phone
 
 Phones are very good at filling empty minutes.
 
