@@ -227,31 +227,59 @@ A free program is not automatically a good program.
 
 But when the cost of distribution is nearly zero and the software does not require an expensive continuing service, zero is a real competitive price.
 
-## Not an app factory
+## This is an app factory
 
-The target is not "generate ten thousand apps."
+The target **is** an app factory.
 
-Most possible apps are useless.
+The important question is what kind.
 
-The useful loop is narrower:
+The factory should not optimize for producing the largest possible number of applications with the least thought. It should optimize for producing ordinary software **quickly, correctly, inspectably, and repeatably**.
+
+The architecture of the factory matters more than any one application it emits.
+
+A useful loop is:
 
 ~~~text
-find a small thing that should exist
-    → build the smallest coherent program
-    → make it useful
-    → make it inspectable
-    → test it on real hardware or real data
-    → learn what the language still does badly
-    → improve the language
-    → make the next program cheaper
+state the job in ordinary domain terms
+    → derive the smallest coherent program
+    → preserve meaning through lowering
+    → build the real artifact
+    → test the claimed behavior
+    → inspect failures at the right layer
+    → correct the language or factory when the failure is structural
+    → emit the next application more cheaply
 ~~~
 
-That loop can produce public goods and language research at the same time.
+Once that machinery is good, producing another small application should become cheap.
 
-The small business gets software.
+The obvious applications are therefore both products and factory acceptance tests.
 
-The phone user gets a useful tool.
+A spirit level tests sensors and display geometry.
 
-The language gets another hostile real-world test.
+Green Grocer tests ordinary state, lists, money, touch, rendering, and business concepts.
 
-And every time the language improves, the cost of producing the next useful little program falls again.
+Econometrician tests mathematical procedures, validation, structured input, and numerical behavior.
+
+CLI programs test text, networking, APIs, process behavior, and composition.
+
+Each successful specimen expands the set of applications the factory can produce without special pleading.
+
+## Assume ordinary apps cannot support a price
+
+The factory is being designed under a deliberately harsh economic assumption:
+
+**an ordinary application should not be expected to make money merely because it is an application.**
+
+If an application needs an expensive continuing service, physical fulfillment, paid human work, or scarce infrastructure, those costs still exist.
+
+But the executable itself should be treated as moving toward a zero-price commodity.
+
+That assumption changes the architecture.
+
+The factory has to make software cheap enough to create, inspect, maintain, rebuild, and distribute that charging for every small program is unnecessary.
+
+That is good for users and particularly useful for small organizations that cannot maintain their own software departments.
+
+The long-term advantage is not one free app.
+
+It is a factory that can keep producing competent free apps because the marginal cost of making the next one has been pushed down.
