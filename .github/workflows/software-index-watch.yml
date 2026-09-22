@@ -1,0 +1,92 @@
+name: Software index watch
+
+on:
+  pull_request:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: software-index-watch
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out exact source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Verify software-index contract with ai-ci
+        uses: isomorphisms/ai-ci@2b0a74262c35f582ee7a3653c85e48afdc4476e1
+        with:
+          root: .
+          suite: .github/ai-ci/suite.tsv
+
+      - name: Enforce ai-ci GitHub runner policy
+        uses: isomorphisms/ai-ci/github@2b0a74262c35f582ee7a3653c85e48afdc4476e1
+        with:
+          root: .
+          exceptions: "-"
+          visibility: public
+
+      - name: Exercise watcher hostile cases
+        run: python3 ci/software_watch.py self-test
+
+      - name: Verify local index contract
+        run: python3 ci/software_watch.py verify-local
+
+  refresh:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: verify
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out current public index
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Compare upstream software state
+        run: |
+          set -eu
+          python3 ci/software_watch.py update --report "$RUNNER_TEMP/software-watch-report.md"
+          python3 ci/software_watch.py verify-local
+
+      - name: Open or refresh update pull request
+        run: |
+          set -eu
+
+          if git diff --quiet -- README.md tracked-software.tsv; then
+            echo "No upstream changes."
+            exit 0
+          fi
+
+          base="${{ github.event.repository.default_branch }}"
+          branch="automation/upstream-software-refresh"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add README.md tracked-software.tsv
+          git commit -m "Refresh tracked software state"
+          git push --force origin "HEAD:refs/heads/$branch"
+
+          existing="$(
+            gh pr list               --repo "$GITHUB_REPOSITORY"               --state open               --head "$branch"               --base "$base"               --json number               --jq '.[0].number // empty'
+          )"
+
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing"               --repo "$GITHUB_REPOSITORY"               --title "Refresh tracked software state"               --body-file "$RUNNER_TEMP/software-watch-report.md"
+          else
+            gh pr create               --repo "$GITHUB_REPOSITORY"               --base "$base"               --head "$branch"               --title "Refresh tracked software state"               --body-file "$RUNNER_TEMP/software-watch-report.md"
+          fi

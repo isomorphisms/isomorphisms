@@ -4,11 +4,13 @@ Current software and installable releases.
 
 ## Wegert
 
+<!-- software-release:wegert:begin -->
 **Wegert Android test 0.1.50** — prerelease
 
 - [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk)
 - [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50)
 - [Source](https://github.com/isomorphismes/wegert)
+<!-- software-release:wegert:end -->
 
 <video controls muted loop src="https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4"></video>
 
@@ -19,11 +21,13 @@ Current software and installable releases.
 
 ## Accelerometer
 
+<!-- software-release:accelerometer:begin -->
 **Accelerometer native 0.2.0**
 
 - [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk)
 - [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0)
 - [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
+<!-- software-release:accelerometer:end -->
 
 <video controls muted loop src="https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4"></video>
 
@@ -34,14 +38,16 @@ Current software and installable releases.
 
 ## Algebraic Variety Explorer
 
+<!-- software-release:algebraic-variety-explorer:begin -->
 **SURFER Android port — experimental**
 
 - [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
+<!-- software-release:algebraic-variety-explorer:end -->
 - [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
 
-<video controls muted loop playsinline src="https://raw.githubusercontent.com/isomorphisms/software/main/media/algebraic-variety-explorer-demo.mp4"></video>
+<video controls muted loop playsinline src="https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo.mp4"></video>
 
-[Watch demo](https://github.com/isomorphisms/software/blob/main/media/algebraic-variety-explorer-demo.mp4?raw=1)
+[Watch demo](https://github.com/isomorphisms/software/blob/my/media/algebraic-variety-explorer-demo.mp4?raw=1)
 
 Rendered interaction preview using the current app layout and shipped Torus, Cayley cubic, and Heart examples.
 

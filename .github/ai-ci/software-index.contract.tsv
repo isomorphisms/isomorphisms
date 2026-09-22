@@ -1,0 +1,15 @@
+nonempty	SOFTWARE-MANIFEST	tracked-software.tsv
+tsv_header	SOFTWARE-MANIFEST-HEADER	tracked-software.tsv	id,repository,branch,release_policy,asset_regex,release_link_text,current_release,source_sha
+nonempty	SOFTWARE-WATCHER	ci/software_watch.py
+contains	SOFTWARE-WEGERT	tracked-software.tsv	isomorphismes/wegert
+contains	SOFTWARE-ACCELEROMETER	tracked-software.tsv	Ashtray-Archer/utilities-android-phone-user
+contains	SOFTWARE-SURFER	tracked-software.tsv	isomorphismes/algebraic-variety-explorer-mobile
+contains	SOFTWARE-WEGERT-MARKER	README.md	software-release:wegert:begin
+contains	SOFTWARE-ACCELEROMETER-MARKER	README.md	software-release:accelerometer:begin
+contains	SOFTWARE-SURFER-MARKER	README.md	software-release:algebraic-variety-explorer:begin
+actions_pinned	SOFTWARE-ACTION-PINS	.github/workflows/software-index-watch.yml
+yaml_forbid_key	SOFTWARE-NO-CONTINUE	.github/workflows/software-index-watch.yml	continue-on-error
+yaml_run_not_contains	SOFTWARE-NO-SWALLOW-OR	.github/workflows/software-index-watch.yml	||
+yaml_run_not_contains	SOFTWARE-NO-SET-PLUS-E	.github/workflows/software-index-watch.yml	set +e
+contains	SOFTWARE-SCHEDULE	.github/workflows/software-index-watch.yml	17 */6 * * *
+contains	SOFTWARE-UPDATE-COMMAND	.github/workflows/software-index-watch.yml	ci/software_watch.py update
