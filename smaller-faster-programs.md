@@ -24,6 +24,77 @@ Other experiments push the same idea toward ARM, WebAssembly, GPUs, embedded sys
 
 The goal is not “remove layers” as an aesthetic rule. A layer earns its place when it provides something useful. The question is whether a program should pay for machinery it does not need.
 
+## C is not the universal target
+
+For decades, targeting C has been a practical way to get portability and reuse an existing compiler toolchain.
+
+That made sense.
+
+It does not make C a mandatory middle layer for every new language.
+
+A compiler can instead target the thing the machine actually consumes, or a target-specific language that already matches the problem:
+
+~~~text
+Idriç
+    → x86-64 instructions / ELF
+    → ARM / Thumb instructions
+    → DEX
+    → WebAssembly
+    → GPU shader code
+    → embedded target code
+~~~
+
+The exact target differs by program.
+
+The principle is the same:
+
+**do not route through C merely because languages traditionally route through C.**
+
+C can still be useful as a reference implementation, compatibility boundary, oracle, or deliberately chosen backend.
+
+It just does not get privileged status as the substrate underneath everything else.
+
+## Direct targets make the lowering easier to inspect
+
+A direct backend creates a shorter semantic path.
+
+Instead of:
+
+~~~text
+source language
+    → generated C
+    → C frontend
+    → C optimizer
+    → compiler IR
+    → assembler
+    → linker
+    → executable
+~~~
+
+a narrow backend can look more like:
+
+~~~text
+checked source
+    → compiler-owned representation
+    → target operations
+    → target artifact
+~~~
+
+That shorter path is useful for more than speed.
+
+It makes it easier to answer:
+
+- which language operation produced these instructions?
+- where was precision chosen?
+- where was a value represented differently?
+- which runtime service was introduced?
+- what target feature is unsupported?
+- which artifact did the test actually execute?
+
+The low-level side of the project is therefore not an attempt to make the source look like assembly.
+
+It is an attempt to make the descent from high-level meaning to the real target explicit.
+
 ## Use the representation the problem needs
 
 Size and speed also depend on representation.

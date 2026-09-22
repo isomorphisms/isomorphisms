@@ -51,6 +51,64 @@ sensor measurement
 
 That is much easier to inspect than one large block of arithmetic even when both compile to similar machine operations.
 
+## Let real programs cast the language
+
+Idriç should not be designed in isolation and then imposed on applications.
+
+The applications are the mold.
+
+A spirit level exposes one set of needs.
+
+A grocery cart exposes another.
+
+A statistics program, an HTTP client, a shell command, a GPU renderer, a browser index, and an embedded program expose others.
+
+When the natural implementation of one of those jobs repeatedly feels awkward, ambiguous, ceremony-heavy, or hard to inspect, that is language-design evidence.
+
+The response should not automatically be:
+
+> write more boilerplate and learn the language better.
+
+Sometimes the language is the thing that should move.
+
+The design loop is:
+
+~~~text
+real problem
+    → write the clearest version we can imagine
+    → discover what the language cannot express cleanly
+    → change the language or its libraries
+    → lower the result honestly
+    → test it on the real target
+    → repeat with a different problem
+~~~
+
+This is intentionally empirical.
+
+The language grows under pressure from actual work rather than from a closed list of features decided in advance.
+
+## Readability judgment is part of the evidence
+
+There is no machine theorem that decides which source is easiest for a person to read.
+
+Human reaction therefore belongs in the design process.
+
+If a representation repeatedly feels unnatural, if a name forces mental decoding, if punctuation is ambiguous, or if a supposedly elegant abstraction hides what the program is doing, that matters.
+
+The useful question is not merely whether the compiler can parse the program.
+
+It is whether the source gives a reader the right conceptual picture with as little reconstruction as possible.
+
+That judgment then meets harder checks:
+
+- does the program still have precise semantics?
+- is the notation actually unambiguous?
+- can the compiler preserve the distinction being expressed?
+- can tests verify the important laws?
+- can the chosen target implement it without a hidden fallback?
+
+The language is therefore shaped jointly by mathematical structure, human readability, and executable evidence.
+
 ## Expose mechanism by descent
 
 Top-level source should show purpose. Deeper files can expose the implementation.
