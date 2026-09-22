@@ -10,6 +10,13 @@ Current installable software releases.
 - [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50)
 - [Source](https://github.com/isomorphismes/wegert)
 
+<video controls muted loop src="https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4"></video>
+
+[![Wegert Android interaction demo](https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles-preview.gif)](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
+
+[Watch Android demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
+
+
 ## Accelerometer
 
 **Accelerometer native 0.2.0**
