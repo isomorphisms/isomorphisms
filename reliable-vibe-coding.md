@@ -1,4 +1,4 @@
-# Making vibe coding reliable
+# Reliable vibe coding
 
 AI makes it cheap to produce code.
 
