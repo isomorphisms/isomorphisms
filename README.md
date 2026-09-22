@@ -1,6 +1,6 @@
 # Software
 
-Current installable software releases.
+Current software and installable releases.
 
 ## Wegert
 
@@ -30,6 +30,20 @@ Current installable software releases.
 [![Accelerometer recorded replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
 [Watch MP4 replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
+
+
+## Algebraic Variety Explorer
+
+**SURFER Android port — experimental**
+
+- [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
+- [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
+
+<video controls muted loop playsinline src="https://raw.githubusercontent.com/isomorphisms/software/main/media/algebraic-variety-explorer-demo.mp4"></video>
+
+[Watch demo](https://github.com/isomorphisms/software/blob/main/media/algebraic-variety-explorer-demo.mp4?raw=1)
+
+Rendered interaction preview using the current app layout and shipped Torus, Cayley cubic, and Heart examples.
 
 
 The release artifacts remain attached to their source repositories; this repository is the public software index for now.
