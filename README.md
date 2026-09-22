@@ -33,3 +33,7 @@ Current installable software releases.
 
 
 The release artifacts remain attached to their source repositories; this repository is the public software index for now.
+
+---
+
+**More:** [Applying highbrow math](applying-highbrow-math/) · [Making programming languages do what they say they do](programming-languages-do-what-they-say/) · [Writing an easy to read programming language](easy-to-read-programming-language/) · [Making programs smaller and faster](smaller-faster-programs/) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps/) · [Making agents smarter about things](making-agents-smarter-about-things/) · [Great literature on your phone](great-literature-on-your-phone/) · [Mathematics games](mathematics-games/) · [Pursuing color with stacks](pursuing-color-with-stacks/) · [Hyperbolic geometry](hyperbolic-geometry/) · [Rotations and hyperplanes](rotations-and-hyperplanes/)
