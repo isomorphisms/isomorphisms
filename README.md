@@ -12,10 +12,10 @@ Current installable software releases.
 
 ## Accelerometer
 
-**Accelerometer native 0.1.0**
+**Accelerometer native 0.2.0**
 
-- [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.1.0/accelerometer-native-v0.1.0.apk)
-- [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.1.0)
+- [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk)
+- [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0)
 - [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
 
 The release artifacts remain attached to their source repositories; this repository is the public software index for now.
