@@ -20,6 +20,8 @@ There is no generated C in that production route, and no C compiler, assembler, 
 
 The Android DEX work follows the same principle. Idriç writes DEX structures directly instead of generating Java or Kotlin and then relying on `javac`, Gradle, or `d8` as compiler stages.
 
+That direct DEX path can also be a deliberate portable holding pattern: ship useful Android programs now while architecture-specific native backends keep improving independently. The deployment side of that strategy is described in [Apps should be smaller than the totality of all Russian literature](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md).
+
 Other experiments push the same idea toward ARM, WebAssembly, GPUs, embedded systems, and specialized targets.
 
 The goal is not “remove layers” as an aesthetic rule. A layer earns its place when it provides something useful. The question is whether a program should pay for machinery it does not need.
