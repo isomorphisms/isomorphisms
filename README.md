@@ -44,7 +44,7 @@ Installable releases:
 
 ![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/software/raw/refs/heads/my/media/algebraic-variety-explorer-demo-preview.gif)
 
-The release artifacts remain attached to their source repositories; this repository is the public software index for now.
+
 
 ---
 
