@@ -107,6 +107,8 @@ If Float16 is enough for a quantity, silently widening everything to a host `Dou
 
 If a GPU program is finite and bounded, a specialized shader representation may be better than dragging a general-purpose runtime into the target.
 
+Persistent storage is the same kind of choice. [My filesystem, my way](my-filesystem-my-way.md) asks why an append-heavy application, a multiply indexed data set, and a random-access application should all be forced through the same storage layout.
+
 The same principle appears repeatedly:
 
 **preserve meaning, then lower deliberately.**
