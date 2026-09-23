@@ -44,7 +44,7 @@ Current software and installable releases.
 <!-- software-release:algebraic-variety-explorer:end -->
 - [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
 
-![Algebraic Variety Explorer interaction demo](https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo-preview.gif)
+![Algebraic Variety Explorer interaction demo](media/algebraic-variety-explorer-demo-preview.gif)
 
 The release artifacts remain attached to their source repositories; this repository is the public software index for now.
 
