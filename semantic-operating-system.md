@@ -416,6 +416,25 @@ Once objects have stable identity and many relations, search can mean many thing
 
 Those mechanisms can coexist.
 
+A concrete retrieval stack can be deliberately boring at the first layer:
+
+~~~text
+exact identifiers and links
+    → BM25 lexical candidates
+    → vector-similar candidates
+    → category / hyperplane filters
+    → task and graph context
+    → explicit reason for each result
+~~~
+
+BM25 is useful here precisely because it is not a semantic embedding. It ranks documents or fragments by the query words they actually contain, giving more weight to informative terms and discounting terms that are common everywhere. In ordinary user terms, it is a much better version of “find pages containing these words,” not a model that claims to understand the page.
+
+Vector indexing answers a different question: “what else is close in meaning even when it uses different words?” A support-vector-machine-style classifier answers another: “which side of this learned category boundary is this object on?” Neither replaces BM25. They can all point at the same durable object through different indexes.
+
+For someone following a [Pixegami](https://www.youtube.com/@pixegami)-style AI coding tutorial, the interface should not require any of those names. The user should be able to ask something like “find the part where I configured the agent that can edit files” and get useful results. Underneath, one result may have matched the actual words, another may have been semantically similar, and another may belong to the current coding task. The system should preserve those reasons rather than flattening them into one mysterious score.
+
+This becomes especially useful for [contextual find and replace](contextual-find-and-replace.md): retrieval proposes candidate places; exact structure and verification decide what may actually change.
+
 The system should expose which one produced an answer.
 
 ## The operating system can know more than bytes and paths

@@ -33,29 +33,21 @@ Current software and installable releases.
 
 [![Accelerometer recorded replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
-[Watch MP4 replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
 
 ## Algebraic Variety Explorer
 
 <!-- software-release:algebraic-variety-explorer:begin -->
-**SURFER Android port — experimental**
+**SURFER Android port**
 
 - [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
 <!-- software-release:algebraic-variety-explorer:end -->
 - [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
 
-<video controls muted loop playsinline src="https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo.mp4"></video>
-
-[![Algebraic Variety Explorer interaction demo](https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo-preview.gif)](https://github.com/isomorphisms/software/blob/my/media/algebraic-variety-explorer-demo.mp4?raw=1)
-
-[Watch demo](https://github.com/isomorphisms/software/blob/my/media/algebraic-variety-explorer-demo.mp4?raw=1)
-
-Rendered interaction preview using the current app layout and shipped Torus, Cayley cubic, and Heart examples.
-
+![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/software/raw/refs/heads/my/media/algebraic-variety-explorer-demo-preview.gif)
 
 The release artifacts remain attached to their source repositories; this repository is the public software index for now.
 
 ---
 
-**More:** [Applying highbrow math](applying-highbrow-math.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [Apps should be smaller than the totality of all Russian literature](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Great literature on your phone](great-literature-on-your-phone.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [Hyperbolic geometry](hyperbolic-geometry.md) · [FPGA grep](fpga-grep.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [iBrowser, Pensieve, Grease, and the semantic operating system](semantic-operating-system.md)
+**More:** [Readable notation is usable now](readable-notation.md) · [Applying highbrow math](applying-highbrow-math.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [Apps should be smaller than the totality of all Russian literature](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Great literature on your phone](great-literature-on-your-phone.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [Hyperbolic geometry](hyperbolic-geometry.md) · [FPGA grep](fpga-grep.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [iBrowser, Pensieve, Grease, and the semantic operating system](semantic-operating-system.md) · [Contextual find and replace](contextual-find-and-replace.md)
