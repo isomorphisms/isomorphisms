@@ -1,4 +1,4 @@
-# Browser, Pensieve, Grease, and the semantic operating system
+# iBrowser, Pensieve, Grease, and the semantic operating system
 
 Unix gave us a small collection of durable ideas: files, directories, streams, processes, pipes, permissions, and ordinary tools that compose.
 
@@ -13,6 +13,73 @@ A semantic operating system asks:
 The goal is not to discard working Unix machinery for novelty.
 
 The goal is to stop treating historical accidents as laws of nature.
+
+## iBrowser is not a DOM-optimization project
+
+Making DOM walking faster is useful.
+
+Adding command-line hooks is useful.
+
+Pensieve, persistent tabs, renderer recovery, semantic search, agent hooks, filesystem experiments, and better shell interfaces are useful too.
+
+None of those is the whole project.
+
+The larger iBrowser idea is to re-architect the environment so that state and operations stop being trapped inside unrelated application silos.
+
+A useful sketch is:
+
+```text
+durable objects and events
+    ↓
+typed relationships and stable identities
+    ↓
+many rebuildable indexes and materialized views
+    ↓
+meaningful operations
+    ├── phone UI
+    ├── renderer
+    ├── shell
+    ├── agent
+    ├── automation
+    └── inspector
+```
+
+The renderer is a view onto durable state, not the owner of the state.
+
+A tab is a navigation thread, not a process.
+
+Search is not one box; it is a family of indexes and traversals over the same objects.
+
+The shell is not merely a launcher; it is another semantic interface.
+
+An agent is not a screen scraper; it is another client of the same operations.
+
+DOM walking therefore matters twice: it is useful work in its own right, and it is a concrete workload for testing whether a better representation or machine lowering can make common semantic operations cheaper. It should not define the architecture.
+
+## Mine good system designs instead of inheriting one system
+
+The early Unix name worth keeping in this conversation is **Doug McIlroy**.
+
+The useful inheritance is not a frozen 1970s interface. It is the habit of composing small understandable mechanisms into larger work. The Unix retrospective describes pipes as a major change in how utility programs were conceived, precisely because existing programs could be interconnected into new computations.
+
+Other systems are worth mining for different reasons:
+
+- **Plan 9** — per-process namespaces and 9P show how resources can be rearranged and presented through a uniform interface without requiring one global filesystem view.
+- **BeOS / BFS** — file attributes, indexes, and queries show how filesystem objects can participate in database-like lookup without abandoning ordinary files.
+- **Smalltalk** — persistent live objects and pervasive inspection are useful reference points for an environment where program state is meant to be understood and manipulated.
+- **Oberon** — a compact integrated language/system is a useful counterexample to the assumption that a modern environment must be assembled from enormous independent stacks.
+- **Lisp-machine environments** — interactive inspection, incremental development, and programmable system surfaces are useful references for making the environment itself malleable.
+
+Primary historical references for the first three:
+
+- [The UNIX Time-sharing System — A Retrospective](https://www.bell-labs.com/usr/dmr/www/retro.pdf)
+- [Plan 9 from Bell Labs — Overview](https://9p.io/plan9/about.html)
+- [Practical File System Design: The Be File System](https://www.haiku-os.org/legacy-docs/practical-file-system-design.pdf)
+
+The point is not to clone any of them.
+
+With cheap automated code reading and experimentation, obscure operating systems, papers, books, abandoned interfaces, and old implementation tricks can all be treated as an architectural corpus. Good mechanisms can be tested against the current semantic model instead of being accepted or rejected because of their age.
+
 
 ## Start with meaning
 

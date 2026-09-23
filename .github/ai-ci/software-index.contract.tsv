@@ -13,3 +13,9 @@ yaml_run_not_contains	SOFTWARE-NO-SWALLOW-OR	.github/workflows/software-index-wa
 yaml_run_not_contains	SOFTWARE-NO-SET-PLUS-E	.github/workflows/software-index-watch.yml	set +e
 contains	SOFTWARE-SCHEDULE	.github/workflows/software-index-watch.yml	17 */6 * * *
 contains	SOFTWARE-UPDATE-COMMAND	.github/workflows/software-index-watch.yml	ci/software_watch.py update
+nonempty	SOFTWARE-SMALL-APPS	apps-should-be-smaller-than-the-totality-of-all-russian-literature.md
+nonempty	SOFTWARE-FPGA-GREP	fpga-grep.md
+contains	SOFTWARE-FRONT-SMALL-APPS	README.md	apps-should-be-smaller-than-the-totality-of-all-russian-literature.md
+contains	SOFTWARE-FRONT-FPGA-GREP	README.md	fpga-grep.md
+contains	SOFTWARE-FRONT-IBROWSER	README.md	semantic-operating-system.md
+contains	SOFTWARE-IBROWSER-SCOPE	semantic-operating-system.md	iBrowser is not a DOM-optimization project
