@@ -48,19 +48,4 @@ The release artifacts remain attached to their source repositories; this reposit
 
 ---
 
-## What I'm excited about
-
-Vibe coding a compiler, of course!
-
----But why? What does that mean?
-
-Now we react to, either ourselves as individuals or teams, or teams and their competitors, being given a superpower. I won't make business predictions; I answer as a craftsperson.
-
-I get to have it *all*, my way. My operating system. My language. My keyboard. My machine instructions. My idea of clarity.
-
----Sounds personal. How do you go about that?
-
-By fixing the problems I care about, until I have enough of them to effectively outline a "mold" for the way the browser, the filesystem, the shell, and everything else "should" be, and melting the language and whatever it comes into contact with, until it's molten---liquid that forms into the crevices of those problems---and then letting it harden.
-
-
-[Readable notation is usable now](readable-notation.md) · [Applying highbrow math](applying-highbrow-math.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [Apps should be smaller than the totality of all Russian literature](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Great literature on your phone](great-literature-on-your-phone.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [Hyperbolic geometry](hyperbolic-geometry.md) · [FPGA grep](fpga-grep.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [iBrowser, Pensieve, Grease, and the semantic operating system](semantic-operating-system.md) · [Contextual find and replace](contextual-find-and-replace.md)
+[Readable notation is usable now](readable-notation.md) · [Applying highbrow math](applying-highbrow-math.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [Apps should be smaller than the totality of all Russian literature](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Great literature on your phone](great-literature-on-your-phone.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [Hyperbolic geometry](hyperbolic-geometry.md) · [FPGA grep](fpga-grep.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [iBrowser, Pensieve, Grease, and the semantic operating system](semantic-operating-system.md) · [Contextual find and replace](contextual-find-and-replace.md) · [What I'm excited about](what-im-excited-about.md)
