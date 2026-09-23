@@ -61,6 +61,8 @@ Those carriers are not interchangeable arrays of numbers.
 
 They have different redundancy, different numerical behavior, different storage costs, and different invariants.
 
+Once those carriers are stored, the same choice becomes a layout and indexing question too. [My filesystem, my way](my-filesystem-my-way.md) follows that connection down into multiply indexed data, allocation, and address layout.
+
 The interesting language-design question is whether the source can say **rotation** while still letting the implementation choose the right concrete carrier.
 
 ## Hyperplanes

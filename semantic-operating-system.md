@@ -265,6 +265,8 @@ It is:
 
 **do not let one mediated filesystem interface define the architecture.**
 
+That is also the point of [My filesystem, my way](my-filesystem-my-way.md): different applications should be allowed to use different storage layouts and allocation structures when their workloads call for them.
+
 Where permissions and deployment context allow it, the system should be able to use different storage backends and lower-level native operations while keeping the higher-level storage semantics unchanged.
 
 The exFAT/FUSE work is useful precisely because it forces us to distinguish:
