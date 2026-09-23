@@ -118,6 +118,8 @@ It also lets an agent answer useful questions later:
 
 Pensieve already treats durable objects as multiply indexed.
 
+[My filesystem, my way](my-filesystem-my-way.md) takes that literally at the storage level too: several useful indexes do not require one privileged physical layout to define what the object is.
+
 Contextual find and replace can use those same indexes without making any one of them authoritative:
 
 ~~~text
