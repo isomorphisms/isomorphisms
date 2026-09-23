@@ -116,6 +116,8 @@ Accelerating the matcher does not automatically accelerate directory walking.
 
 Conversely, a better index can avoid scanning enough data that the matcher stops being the dominant cost.
 
+That reaches into storage design itself: [My filesystem, my way](my-filesystem-my-way.md) allows an application to choose an index and allocation layout around the access pattern instead of assuming one general filesystem organization is always the right one.
+
 ## DOM walking is one workload, not the whole idea
 
 [iBrowser](https://github.com/isomorphisms/ib) provides several useful workloads:
