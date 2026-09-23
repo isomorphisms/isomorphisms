@@ -1,30 +1,20 @@
 Installable releases:
 
-## Wegert
+### Wegert
 
 <!-- software-release:wegert:begin -->
-**Wegert Android test 0.1.50** — prerelease
-
-- [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk)
-- [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50)
-- [Source](https://github.com/isomorphismes/wegert)
+[APK — release 0.1.50](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [source](https://github.com/isomorphismes/wegert) · [demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1) — Phase portraits of rational functions in the complex plane, rendered live on your phone. Add and drag zeros and poles and immediately see the function change.
 <!-- software-release:wegert:end -->
 
 <video controls muted loop src="https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4"></video>
 
 [![Wegert Android interaction demo](https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles-preview.gif)](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
 
-[Watch Android demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
 
-
-## Accelerometer
+### Accelerometer
 
 <!-- software-release:accelerometer:begin -->
-**Accelerometer native 0.2.0**
-
-- [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk)
-- [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0)
-- [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
+[APK — release 0.2.0](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk) · [source](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/accelerometer) · [native sensor path](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) — Access the accelerometer through Android's native `ASensorManager` / `ASensorEventQueue` path, bypassing `android.hardware.SensorManager`, `SensorEventListener`, and application-side JNI glue. The APK is DEX-free and the ARMv7 build runs as Thumb code. The compact geometric state and related machine representations are part of a broader [ARM/Thumb compiler](https://github.com/isomorphisms/idric-arm-thumb) experiment in [representing](https://github.com/isomorphisms/Idric/pull/110) complex numbers, rotations, quaternions, and related geometry more tightly.
 <!-- software-release:accelerometer:end -->
 
 <video controls muted loop src="https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4"></video>
@@ -32,23 +22,20 @@ Installable releases:
 [![Accelerometer recorded replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
 
-
-## Algebraic Variety Explorer
+### Algebraic Variety Explorer
 
 <!-- software-release:algebraic-variety-explorer:begin -->
-**SURFER Android port**
-
-- [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
+[source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile) · [build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission) — Type any polynomial in `x`, `y`, and `z`, with arbitrary powers and products, and immediately see its real zero set as a surface. Ray tracer by Christian Stussak for IMAGINARY's SURFER; Android adaptation produced with ChatGPT 5.6.
 <!-- software-release:algebraic-variety-explorer:end -->
-- [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
 
 ![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/isomorphisms/raw/refs/heads/main/media/algebraic-variety-explorer-demo-preview.gif)
-
 
 
 ---
 
 What is 2,000 commits/month aiming at?
+
+Much of the low-level representation work is being co-designed with guidance from ChatGPT 5.6 Sol, which is teaching me some very cool register tricks for complex numbers, rotations, quaternions, and other geometry. I believe this will have further applications to DOM walking, grep, and biological data search. Watch this space over the next few months and see what we discover.
 
 ### Larger goals / what I'm excited about
 
