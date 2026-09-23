@@ -98,7 +98,7 @@ The direct backend work attacks another source of waste: unnecessary layers betw
 
 If a program can go directly from a checked representation to machine code, DEX, WebAssembly, or a GPU target, it may not need a generated intermediate language, a second compiler, a large runtime, a general framework, or libraries that provide far more machinery than the program uses.
 
-Likewise, better representations can reduce the amount of data that needs to be stored, moved, decoded, or processed.
+Likewise, better representations can reduce the amount of data that needs to be stored, moved, decoded, or processed. [My filesystem, my way](my-filesystem-my-way.md) extends that to storage itself: an append arena or application-specific allocation/index structure can avoid paying for a general representation the workload does not need.
 
 These are mostly direct efficiency gains. They may be smaller than eliminating whole failed iterations, but they repeat every time the program is built, moved, loaded, or run.
 
