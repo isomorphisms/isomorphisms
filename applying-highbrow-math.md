@@ -33,6 +33,8 @@ physical direction
 
 Now the code has something intelligible to correspond to. Each stage can have a name, an invariant, and a test.
 
+The next question is where those bytes actually live. [My filesystem, my way](my-filesystem-my-way.md) treats indexing and storage layout as another place where the mathematical representation can determine the implementation instead of being flattened into one universal arrangement.
+
 That is the general idea of Walnut & Burgundy: take subjects that are usually left in books, papers, or blackboards and make them operational without flattening away the interesting structure.
 
 Current homes include [fulton](https://github.com/walnut-burgundy/fulton) for representation-theoretic work, [tymoczko](https://github.com/walnut-burgundy/tymoczko) for music theory with dependent types, and the surrounding Walnut & Burgundy repositories for geometry, statistics, visualization, and related experiments.
