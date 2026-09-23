@@ -125,4 +125,6 @@ The language experiments include direct machine-code, DEX, WebAssembly, GPU, emb
 
 Readable source and low-level control should reinforce each other.
 
+That includes persistent layout. [My filesystem, my way](my-filesystem-my-way.md) carries the same idea from high-level objects through indexes and allocation structures until the choices eventually become addresses and machine instructions.
+
 A program should be easier to understand because its structure is visible, not because the difficult parts have merely been hidden somewhere else.
