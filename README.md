@@ -45,13 +45,7 @@ Current software and installable releases.
 <!-- software-release:algebraic-variety-explorer:end -->
 - [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
 
-<video controls muted loop playsinline src="https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo.mp4"></video>
-
-[![Algebraic Variety Explorer interaction demo](https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo-preview.gif)](https://github.com/isomorphisms/software/blob/my/media/algebraic-variety-explorer-demo.mp4?raw=1)
-
-[Watch demo](https://github.com/isomorphisms/software/blob/my/media/algebraic-variety-explorer-demo.mp4?raw=1)
-
-Rendered interaction preview using the current app layout and shipped Torus, Cayley cubic, and Heart examples.
+![Algebraic Variety Explorer interaction demo](media/algebraic-variety-explorer-demo-preview.gif)
 
 
 ## Readable notation is usable now
