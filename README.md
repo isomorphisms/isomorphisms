@@ -42,7 +42,7 @@ Installable releases:
 <!-- software-release:algebraic-variety-explorer:end -->
 - [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
 
-![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/isomorphisms/raw/refs/heads/my/media/algebraic-variety-explorer-demo-preview.gif)
+![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/isomorphisms/raw/refs/heads/main/media/algebraic-variety-explorer-demo-preview.gif)
 
 
 
