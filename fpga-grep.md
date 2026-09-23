@@ -12,6 +12,8 @@ For a fixed-string search, the answer might be scalar branches, a word-level bit
 
 The source-level request should not have to choose too early.
 
+The same problem appears in shader compilation: [GPU programming](gpu-programming.md) tracks a case where source control flow was lowered too early into value selection, forcing the backend to reconstruct structure later.
+
 ## One meaning, several lowerings
 
 A compiler or library can preserve operations such as:
