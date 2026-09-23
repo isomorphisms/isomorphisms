@@ -33,7 +33,7 @@ Installable releases:
 
 ---
 
-What is 2,000 commits/month aiming at?
+What is all this work aiming at?
 
 Much of the low-level representation work is being co-designed with guidance from ChatGPT 5.6 Sol, which is teaching me some very cool register tricks for complex numbers, rotations, quaternions, and other geometry. I believe this will have further applications to DOM walking, grep, and biological data search. Watch this space over the next few months and see what we discover.
 
