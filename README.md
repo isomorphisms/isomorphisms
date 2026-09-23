@@ -19,7 +19,7 @@ Phase portraits of rational functions in the complex plane, rendered live on And
 
 ### Accelerometer
 
-Read the phone's accelerometer through Android's native sensor stack in a DEX-free `NativeActivity`: no Java, Kotlin, Gradle, or Compose. The ARMv7 build runs as Thumb code.
+Read the phone's accelerometer through Android's native sensor stack in a DEX-free `NativeActivity`. The ARMv7 build runs as Thumb code, with the implementation kept deliberately close to the hardware and small enough that the representation and calling-convention choices are visible rather than buried under framework layers.
 
 <!-- software-release:accelerometer:begin -->
 - [APK — release 0.2.0](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk)
