@@ -1,11 +1,11 @@
 Installable releases:
 
-## Wegert
+### Wegert
+
+Phase portraits of rational functions in the complex plane, rendered live on Android.
 
 <!-- software-release:wegert:begin -->
-**Wegert Android test 0.1.50** — prerelease
-
-- [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk)
+- [APK — release 0.1.50](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk)
 - [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50)
 - [Source](https://github.com/isomorphismes/wegert)
 <!-- software-release:wegert:end -->
@@ -17,12 +17,12 @@ Installable releases:
 [Watch Android demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
 
 
-## Accelerometer
+### Accelerometer
+
+Read the phone's accelerometer through Android's native sensor stack in a DEX-free `NativeActivity`: no Java, Kotlin, Gradle, or Compose. The ARMv7 build runs as Thumb code.
 
 <!-- software-release:accelerometer:begin -->
-**Accelerometer native 0.2.0**
-
-- [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk)
+- [APK — release 0.2.0](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk)
 - [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0)
 - [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
 <!-- software-release:accelerometer:end -->
@@ -33,11 +33,11 @@ Installable releases:
 
 
 
-## Algebraic Variety Explorer
+### Algebraic Variety Explorer
+
+Type a polynomial in `x`, `y`, and `z`, with arbitrary products and powers, and immediately render its real zero set as a surface. Ray tracer by Christian Stussak for IMAGINARY's SURFER; Android adaptation produced with ChatGPT 5.6.
 
 <!-- software-release:algebraic-variety-explorer:begin -->
-**SURFER Android port**
-
 - [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
 <!-- software-release:algebraic-variety-explorer:end -->
 - [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission)
