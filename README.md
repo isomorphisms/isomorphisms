@@ -46,23 +46,8 @@ Current software and installable releases.
 
 ![Algebraic Variety Explorer interaction demo](https://raw.githubusercontent.com/isomorphisms/software/my/media/algebraic-variety-explorer-demo-preview.gif)
 
-
-## Readable notation is usable now
-
-Input design and parser design can move together. If a symbol says what the operation means, there is no need to make a person hunt-and-peck an ASCII spelling merely because older parsers were designed around it.
-
-- [i-thon](https://github.com/dilapidated-shed/ithon) is a Python experiment with assignment arrows.
-- [IR](https://github.com/isomorphisms/ir) is an R adaptation that accepts `←`, `→`, `λ`, `≟`, `÷`, and `⊗` while keeping ordinary R spellings available.
-- [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample) is the matching Android input experiment: put the useful symbols on keys instead of making the user reconstruct them from punctuation.
-
-This is especially practical with AI-assisted coding. An agent can emit the intended spelling directly, while a human can type the same notation from a purpose-built keyboard. The experiment does not require persuading upstream Python or R to adopt the syntax first.
-
-The real architectural cost is fork proliferation: every parser fork can drift from its upstream language and from editor/tooling assumptions. The useful discipline is therefore to keep the syntax delta small, explicit, tested, and easy to rebase instead of turning each experiment into a new language ecosystem.
-
-Search can use the same layered approach. Exact text, BM25 ranking, vector similarity, learned hyperplanes, graph links, and task context answer different questions and can coexist. [Contextual find and replace](contextual-find-and-replace.md) sketches how to combine them without letting a fuzzy retrieval result silently authorize an edit.
-
 The release artifacts remain attached to their source repositories; this repository is the public software index for now.
 
 ---
 
-**More:** [Applying highbrow math](applying-highbrow-math.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Great literature on your phone](great-literature-on-your-phone.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [Hyperbolic geometry](hyperbolic-geometry.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [Browser, Pensieve, Grease, and semantic operating system](semantic-operating-system.md) · [Contextual find and replace](contextual-find-and-replace.md)
+**More:** [Readable notation is usable now](readable-notation.md) · [Applying highbrow math](applying-highbrow-math.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Great literature on your phone](great-literature-on-your-phone.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [Hyperbolic geometry](hyperbolic-geometry.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [Browser, Pensieve, Grease, and semantic operating system](semantic-operating-system.md) · [Contextual find and replace](contextual-find-and-replace.md)
