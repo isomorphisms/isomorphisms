@@ -97,9 +97,13 @@ The immediate proposal is much smaller:
 
 ## My C style
 
-My own C style is a separate matter from Icky C.
+My own C style is a separate matter from Icky C. ICK does not require anyone else to adopt it.
 
-I tend to prefer long descriptive variable and function names, written in `snake_case_with_underscores`. I prefer ordinary named functions calling ordinary named functions, with the movement of data visible in the source. Someone else using ICK does not need to write C this way.
+For code that I am going to read, though, this is the house style I want agents and contributors to prefer: long descriptive variable and function names, written in `snake_case_with_underscores`; ordinary named functions calling ordinary named functions; and data movement that can be followed directly in the source.
+
+You can think of this as **English-major C**: prefer words that say what the program is doing over compressed abbreviations or type-encoded naming schemes such as Hungarian notation. I would rather read a long, grammatical name than decode a short conventional one.
+
+This is not a claim that everybody should write C this way. If another consumer wants another presentation, an agent or formatter can mechanically translate the source into that house style. The source I have to inspect should optimize for being easy for me to read.
 
 There are also experimental branches exploring a larger question: what should argument flow look like if we stop assuming that a program must be written as a one-dimensional stream of typewriter characters?
 
