@@ -187,14 +187,11 @@ def end_marker(identifier: str) -> str:
 def release_block(row: dict[str, str], release: Release) -> str:
     suffix = " — prerelease" if release.prerelease else ""
     source_url = f"https://github.com/{row['repository']}"
-    return "\n".join(
-        [
-            f"**{release.name}**{suffix}",
-            "",
-            f"- [Download APK]({release.asset_url})",
-            f"- [{row['release_link_text']}]({release.html_url})",
-            f"- [Source]({source_url})",
-        ]
+    return (
+        f"**{release.name}**{suffix} — "
+        f"[Download APK]({release.asset_url}) · "
+        f"[{row['release_link_text']}]({release.html_url}) · "
+        f"[Source]({source_url})"
     )
 
 
