@@ -39,7 +39,7 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 
 **Search / editing:** [IB / Pensieve](https://github.com/isomorphisms/ib) · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-**Systems / reliability:** [Grease](https://github.com/isomorphisms/grease) · [Cat Food](https://github.com/isomorphisms/catfood) · [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/cockswain)
+**Systems / reliability:** [Grease](https://github.com/isomorphisms/grease) · [Cat Food](https://github.com/isomorphisms/catfood) · [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/cockswain) · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
 
 **Mathematics checks:** [Walnut & Burgundy verification](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [fulton](https://github.com/walnut-burgundy/fulton) · [tymoczko](https://github.com/walnut-burgundy/tymoczko)
 
