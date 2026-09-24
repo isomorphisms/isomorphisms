@@ -3,10 +3,10 @@ Installable releases:
 ### Wegert
 
 <!-- software-release:wegert:begin -->
-[APK — release 0.1.50](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [source](https://github.com/isomorphismes/wegert) · [demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1) — Phase portraits of rational functions in the complex plane, rendered live on your phone. Add and drag zeros and poles and immediately see the function change.
+**Wegert Android test 0.1.50** — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
 <!-- software-release:wegert:end -->
 
-<video controls muted loop src="https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4"></video>
+Drag zeros and poles; the phase portrait updates live. [Demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1).
 
 [![Wegert Android interaction demo](https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles-preview.gif)](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
 
@@ -14,10 +14,10 @@ Installable releases:
 ### Accelerometer
 
 <!-- software-release:accelerometer:begin -->
-[APK — release 0.2.0](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk) · [source](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/accelerometer) · [native sensor path](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) — Access the accelerometer through Android's native `ASensorManager` / `ASensorEventQueue` path, bypassing `android.hardware.SensorManager`, `SensorEventListener`, and application-side JNI glue. The APK is DEX-free and the ARMv7 build runs as Thumb code. The compact geometric state and related machine representations are part of a broader [ARM/Thumb compiler](https://github.com/isomorphisms/idric-arm-thumb) experiment in [representing](https://github.com/isomorphisms/Idric/pull/110) complex numbers, rotations, quaternions, and related geometry more tightly. The same line of work spans high-level, mathematically accurate [type-theoretic structure for vectors, hyperplanes, and rotations, including useful reductions](https://github.com/isomorphisms/Idric/blob/Idri%C3%A7/_/examples/unified-higher-mathematics/ROTATION-COMPLEX-PROJECTIVE-CROSS-REFERENCES.md) as well as low-level [efficient geometric storage and computation](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/geometry/README.md). Those ideas may have further implications for cheap, fast classical hyperplane-separation models and for any post-transformer machine-learning models that use vectors.
+**Accelerometer native 0.2.0** — [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk) · [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0) · [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
 <!-- software-release:accelerometer:end -->
 
-<video controls muted loop src="https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4"></video>
+Native Android accelerometer path; DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [ARM/Thumb compiler](https://github.com/isomorphisms/idric-arm-thumb).
 
 [![Accelerometer recorded replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
@@ -25,25 +25,30 @@ Installable releases:
 ### Algebraic Variety Explorer
 
 <!-- software-release:algebraic-variety-explorer:begin -->
-[source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile) · [build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission) — Type any polynomial in `x`, `y`, and `z`, with arbitrary powers and products, and immediately see its real zero set as a surface. Ray tracer by Christian Stussak for IMAGINARY's SURFER; Android adaptation produced with ChatGPT 5.6.
+[Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
 <!-- software-release:algebraic-variety-explorer:end -->
+
+Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission).
 
 ![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/isomorphisms/raw/refs/heads/main/media/algebraic-variety-explorer-demo-preview.gif)
 
 
----
+## Projects
 
-What is all this work aiming at?
+**Readable notation (`← → λ ≠ ≟`):** [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
 
-Much of the low-level representation work is being co-designed with guidance from ChatGPT 5.6 Sol, which is teaching me some very cool register tricks for complex numbers, rotations, quaternions, and other geometry. I believe this will have further applications to DOM walking, grep, and biological data search. Watch this space over the next few months and see what we discover.
+**Search / editing:** [IB / Pensieve](https://github.com/isomorphisms/ib) · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-### Larger goals / what I'm excited about
+**Systems / reliability:** [Grease](https://github.com/isomorphisms/grease) · [Cat Food](https://github.com/isomorphisms/catfood) · [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/cockswain)
 
-[Space age](space-age.md) · [Readable notation is usable now](readable-notation.md) · [Making programming languages do what they say they do](programming-languages-do-what-they-say.md) · [Writing an easy to read programming language](easy-to-read-programming-language.md) · [Programmer's keyboard](programmers-keyboard.md) · [Making programs smaller and faster](smaller-faster-programs.md) · [My filesystem, my way](my-filesystem-my-way.md) · [Apps should be smaller than the totality of all Russian literature](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [Reliable vibe coding](reliable-vibe-coding.md) · [Lots of useful command-line utilities, lots of useful phone utilities — all free](lots-of-useful-command-line-utilities-lots-of-useful-phone-utilities-all-free.md) · [Trying not to melt the polar ice caps](trying-not-to-melt-the-polar-ice-caps.md) · [Making agents smarter about things](making-agents-smarter-about-things.md) · [Literature on your phone](literature.md) · [Mathematics games](mathematics-games.md) · [Pursuing color with stacks](pursuing-color-with-stacks.md) · [GPU programming](gpu-programming.md) · [FPGA grep](fpga-grep.md) · [Rotations and hyperplanes](rotations-and-hyperplanes.md) · [Statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [iBrowser, Pensieve, Grease, and the semantic operating system](semantic-operating-system.md) · [Contextual find and replace](contextual-find-and-replace.md) · [Forms should work on a $60 phone](forms-should-work-on-a-60-dollar-phone.md) · [What I'm excited about](what-im-excited-about.md)
+**Mathematics checks:** [Walnut & Burgundy verification](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [fulton](https://github.com/walnut-burgundy/fulton) · [tymoczko](https://github.com/walnut-burgundy/tymoczko)
+
+**Direction:** [Space age](space-age.md)
+
 
 ## Getting AI to behave
 
-- push forward ([cockswain](https://github.com/isomorphisms/cockswain))
+- push forward ([Cockswain](https://github.com/isomorphisms/cockswain))
 - push back (deterministic tests)
 - factor through (strongly typed programs)
-- anchor to exact references (store local copies of API definitions and useful good/bad sample code; translate in several directions and compare the translations)
+- anchor to exact references
