@@ -35,7 +35,7 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 
 ## Projects
 
-**Readable notation (`← → λ ≠ ≟`):** [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
+**Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
 
 **Search / editing:** [IB / Pensieve](https://github.com/isomorphisms/ib) · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
