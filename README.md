@@ -17,7 +17,7 @@ Drag zeros and poles; the phase portrait updates live. [Demo](https://github.com
 **Accelerometer native 0.2.0** — [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk) · [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0) · [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
 <!-- software-release:accelerometer:end -->
 
-Native Android accelerometer path; DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [ARM/Thumb compiler](https://github.com/isomorphisms/idric-arm-thumb).
+Native Android accelerometer path; DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [ARM/Thumb compiler](https://github.com/dilapidated-shed/idric-arm-thumb).
 
 [![Accelerometer recorded replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
@@ -35,18 +35,18 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 
 ### Pauli
 
-[Source](https://github.com/isomorphisms/pauli) · [Atom in a Box](https://daugerresearch.com/orbitals/mac.shtml) · [App Store](https://apps.apple.com/us/app/atom-in-a-box/id284788633)
+[Source](https://github.com/isomorphismes/pauli) · [Atom in a Box](https://daugerresearch.com/orbitals/mac.shtml) · [App Store](https://apps.apple.com/us/app/atom-in-a-box/id284788633)
 
 **Homage to the OG Dane Dauger, an original gangster of real-time orbital visualization** — using a computational notebook and irreducible representations to get the spherical harmonics symbolically.
 
 
 ## Projects
 
-**Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
+**Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/dilapidated-shed/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
 
-**Search / editing:** [IB / Pensieve](https://github.com/isomorphisms/ib) · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
+**Search / editing:** [IB / Pensieve](https://github.com/dilapidated-shed/ib) · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-**Systems / reliability:** [Grease](https://github.com/isomorphisms/grease) · [Cat Food](https://github.com/isomorphisms/catfood) · [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/cockswain) · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
+**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease) · [Cat Food](https://github.com/isomorphisms/catfood) · [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/cockswain) · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
 
 **Mathematics checks:** [Walnut & Burgundy verification](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [fulton](https://github.com/walnut-burgundy/fulton) · [tymoczko](https://github.com/walnut-burgundy/tymoczko)
 
