@@ -33,6 +33,17 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 ![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/isomorphisms/raw/refs/heads/main/media/algebraic-variety-explorer-demo-preview.gif)
 
 
+### Pauli
+
+[Source](https://github.com/isomorphisms/pauli)
+
+[![Dane Dauger's Atom in a Box orbital](media/dauger-atom-in-a-box-421-placeholder.jpg)](https://apps.apple.com/us/app/atom-in-a-box/id284788633)
+
+**Homage to the OG Dane Dauger, an original gangster of real-time orbital visualization** — using a computational notebook and irreducible representations to get the spherical harmonics symbolically.
+
+Temporary reference image from [Atom in a Box](https://daugerresearch.com/orbitals/mac.shtml), © Dauger Research, Inc.; click the image for the App Store.
+
+
 ## Projects
 
 **Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
