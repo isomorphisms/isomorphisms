@@ -3,7 +3,7 @@ Installable releases:
 ### Wegert
 
 <!-- software-release:wegert:begin -->
-**Wegert Android test 0.1.50** — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
+**Wegert Android test 0.1.50** — prerelease — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
 <!-- software-release:wegert:end -->
 
 Drag zeros and poles; the phase portrait updates live. [Demo](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1).
@@ -17,7 +17,7 @@ Drag zeros and poles; the phase portrait updates live. [Demo](https://github.com
 **Accelerometer native 0.2.0** — [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk) · [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0) · [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
 <!-- software-release:accelerometer:end -->
 
-Native Android accelerometer path; DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [ARM/Thumb compiler](https://github.com/dilapidated-shed/idric-arm-thumb).
+Native Android accelerometer path; DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [ARM/Thumb development line](https://github.com/dilapidated-shed/idric-arm-thumb/tree/native-arm). The backend repository's default branch is the separate direct DEX compiler.
 
 [![Accelerometer recorded replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
@@ -44,9 +44,9 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 
 **Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/dilapidated-shed/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
 
-**Search / editing:** [IB / Pensieve](https://github.com/dilapidated-shed/ib) · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
+**Search / editing:** [IB / Pensieve](https://github.com/dilapidated-shed/ib), an experimental browser and durable task workbench · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease) · [Cat Food](https://github.com/isomorphisms/catfood) · [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/cockswain) · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
+**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/cockswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
 
 **Mathematics checks:** [Walnut & Burgundy verification](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [fulton](https://github.com/walnut-burgundy/fulton) · [tymoczko](https://github.com/walnut-burgundy/tymoczko)
 

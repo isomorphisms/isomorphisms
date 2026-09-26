@@ -1,4 +1,4 @@
 id	repository	branch	release_policy	asset_regex	release_link_text	current_release	source_sha
-wegert	isomorphismes/wegert	main	any	^wegert-[0-9.]+\\.apk$	Release notes and checksum	v0.1.50	07b68f9b00595e312e92cf415fea2e2d31087d56
-accelerometer	Ashtray-Archer/utilities-android-phone-user	main	stable	^accelerometer-native-v[0-9.]+\\.apk$	Release notes and provenance	accelerometer-native-v0.2.0	95a8df3670329fb3ac0126043c06607e74ff0c86
-algebraic-variety-explorer	isomorphismes/algebraic-variety-explorer-mobile	surfer	stable	^Algebraic-Variety-Explorer-.*\\.apk$	Release notes	-	fec6f208215eb0d7e387124ef5bc1e2b6991ef9f
+wegert	isomorphismes/wegert	main	any	^wegert-[0-9.]+\.apk$	Release notes and checksum	v0.1.50	0a7a55ec25dfd9c0b4e0cb2954fa011fdee50014
+accelerometer	Ashtray-Archer/utilities-android-phone-user	main	stable	^accelerometer-native-v[0-9.]+\.apk$	Release notes and provenance	accelerometer-native-v0.2.0	a8722e10318c63ea656729ee2c2cce526a423754
+algebraic-variety-explorer	isomorphismes/algebraic-variety-explorer-mobile	surfer	stable	^Algebraic-Variety-Explorer-.*\.apk$	Release notes	-	3fd55197bb834661ac49ffd62cc36f49654970c1

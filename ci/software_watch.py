@@ -9,6 +9,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -240,6 +241,15 @@ def verify_local(manifest_path: Path, readme_path: Path) -> None:
                 )
             if "Download APK" not in block:
                 raise WatchError(f"README: {row['id']}: release has no APK link")
+            links = re.findall(r"\[Download APK\]\(([^)]+)\)", block)
+            prefix = f"{source_url}/releases/download/{tag}/"
+            if len(links) != 1 or not links[0].startswith(prefix):
+                raise WatchError(f"README: {row['id']}: APK URL does not match release")
+            asset_name = urllib.parse.unquote(links[0][len(prefix):])
+            if not re.fullmatch(row["asset_regex"], asset_name):
+                raise WatchError(
+                    f"README: {row['id']}: advertised APK does not match asset_regex"
+                )
 
 
 def update(
@@ -381,6 +391,28 @@ def self_test() -> None:
         pass
     else:
         raise AssertionError("missing markers must be rejected")
+
+    # Exercise the real offline verifier with a release block and manifest,
+    # including the double-escaped TSV regex that stopped the scheduled watcher.
+    with tempfile.TemporaryDirectory() as directory:
+        manifest = Path(directory) / "tracked.tsv"
+        readme = Path(directory) / "README.md"
+        release = Release(
+            "v1", "Demo 1", False,
+            "https://github.com/owner/repo/releases/tag/v1", "demo-1.0.apk",
+            "https://github.com/owner/repo/releases/download/v1/demo-1.0.apk",
+        )
+        readme.write_text(replace_block(sample, "demo", release_block(row, release)))
+        write_manifest(manifest, [row])
+        verify_local(manifest, readme)
+        broken = dict(row, asset_regex=r"^demo-[0-9.]+\\.apk$")
+        write_manifest(manifest, [broken])
+        try:
+            verify_local(manifest, readme)
+        except WatchError as error:
+            assert "does not match asset_regex" in str(error)
+        else:
+            raise AssertionError("regex excluding the advertised APK must be rejected")
 
 
 def main() -> int:
