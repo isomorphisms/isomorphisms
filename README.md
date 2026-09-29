@@ -65,6 +65,17 @@ I experiment with downloading these manuals and having the bot fill in the detai
 
 Build sizes for a non-stripped ELF reach 43 KB for the simplest program ***because I don't even need libc***.
 
+Some less toy-like Android builds, measured from successful CI artifacts rather than estimated:
+
+| program | package shape | ARMv7 native code | APK |
+| --- | --- | ---: | ---: |
+| [Accelerometer](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/228e303b49deb35fc021655ddaf6098365d9f95e/accelerometer) | one ABI, DEX-free | 19,056 B | 45,591 B |
+| [Pauli](https://github.com/isomorphismes/pauli/tree/5d43e69a63173b44120782d684c77283316120bd/android) | one ABI, DEX-free orbital viewer | 36,128 B | 20,923 B |
+| [Programmer's Unicode Picker](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/9f586c3d5b2be3ade1739dfa7846caed3ed16aa9/math-characters) | three-ABI, DEX-free debug APK | 169,812 B | 610,952 B |
+| [Wegert](https://github.com/isomorphismes/wegert/tree/d326c1512079fd4440a7289cf95f634e48d0f912) | three-ABI, DEX-free F-Droid build | 169,652 B | 1,039,143 B |
+
+The APK column measures the package on disk, not the uncompressed contents. ZIP compression can make a one-ABI APK smaller than the ELF inside it.
+
 
 ## Getting AI to behave
 
