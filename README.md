@@ -46,11 +46,24 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 
 **Search / editing:** [IB / Pensieve](https://github.com/dilapidated-shed/ib), an experimental browser and durable task workbench · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/cockswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
+**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [Android NDK](https://github.com/isomorphisms/android-NDK), reusable DEX/JNI/NativeActivity/NDK and APK substrate · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/cockswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
 
 **Mathematics checks:** [Walnut & Burgundy verification](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [fulton](https://github.com/walnut-burgundy/fulton) · [tymoczko](https://github.com/walnut-burgundy/tymoczko)
 
 **Direction:** [Space age](space-age.md)
+
+
+##### Chatbot as build system
+
+We're used to packaging many builds into one APK, and even to accepting approximate interfaces (such as the JVM), because it's too much for one person to remember every machine architecture, every hardware sensor manual, or how every memory layout might pair with every register layout.
+
+Yeah. Too much for one _person_.
+
+I experiment with downloading these manuals and having the bot fill in the details. (Compiler backends, for example: [ARM/Thumb](https://github.com/fuego-ironworks/idric-arm-thumb) and [GPU](https://github.com/fuego-ironworks/idris-shader-backend).) A companion idea is to develop intermediate representations, compiler front ends, and even see if the bot can nano-optimize without a bench (so far, no on the last one—but a decisive yes on the others).
+
+[Android NDK](https://github.com/isomorphisms/android-NDK) collects the reusable Android-native side of that experiment: DEX/ART, JNI/NativeActivity, NDK interfaces, APK construction, and hardware-reference boundaries.
+
+Build sizes for a non-stripped ELF reach 43 KB for the simplest program ***because I don't even need libc***.
 
 
 ## Getting AI to behave
