@@ -79,7 +79,9 @@ The APK column measures the package on disk, not the uncompressed contents. ZIP 
 
 ## Getting AI to behave
 
-- push forward ([Cockswain](https://github.com/isomorphisms/cockswain))
-- push back (deterministic tests)
-- factor through (strongly typed programs)
-- anchor to exact references
+- **push forward:** [Cockswain](https://github.com/isomorphisms/cockswain) supervises agent work instead of treating one-shot generation as the finished product.
+- **push back:** deterministic tests and [ai-ci](https://github.com/isomorphisms/ai-ci) turn failures into evidence and regressions.
+- **externalize the work:** [Kitchen](https://github.com/isomorphisms/kitchen) is the place where casual scripts and terminal instructions are prepared before they are served. Requirements, target assumptions, fixtures, aggressive cases, tests, exact script versions, and failure notes live in files instead of disappearing into conversational memory. That leaves a deterministic history: what program was actually written, what was tried, what failed, and what should become a regression test or an improvement to the generation/verification process.
+- **stretch goal — languages for model generation:** [Idriç](https://github.com/dilapidated-shed/Idric) and [English-major C](https://github.com/dilapidated-shed/English-major-C) already move source toward more readable, semantically explicit forms. A future language can go further and account for the local, bootstrapping character of language-model output: nearby generated programs should, where possible, be accepted and given nearby deterministic meanings rather than letting small textual drift produce arbitrary behavior.
+
+Across all four: factor through strongly typed programs and anchor claims and code to exact references.
