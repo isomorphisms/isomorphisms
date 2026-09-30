@@ -252,6 +252,69 @@ That costs more per attempted change.
 
 It can cost much less per **accepted correct change**.
 
+## Let implementations teach one another
+
+Parallel implementations in different programming languages are useful for more
+than portability. They expose different mistakes.
+
+A type-heavy implementation may force an invariant into the open. A low-level
+implementation may expose an accidental allocation, byte/text confusion, or
+lifetime assumption. A different parser or standard library may disagree on an
+edge case that looked obvious in the first version.
+
+That only helps reliably if the disagreement leaves the model's context window.
+
+The weak form is:
+
+~~~text
+write version A
+    → write version B
+    → ask the model to compare them
+    → remember the interesting differences for a while
+~~~
+
+The stronger form gives the implementations an external place to communicate:
+
+~~~text
+language-neutral contract + shared fixtures
+                ↓
+       independent implementations
+                ↓
+        same conformance harness
+                ↓
+       explicit per-case receipts
+                ↓
+new discrepancy / invariant / edge case
+                ↓
+       shared fixture or regression
+                ↺
+       rerun every implementation
+~~~
+
+[mbox](https://github.com/isomorphisms/mbox) is a concrete example. Its
+language branches include Idriç, D, Agda, and Idris, but no branch is the
+specification. The contract and shared corpus live on `main`. Every
+implementation receives the same fixtures and conformance cases and reports
+each case explicitly as `PASS`, `FAIL`, `UNIMPLEMENTED`, or `BLOCKED`.
+
+That means one language can teach the others in a definite, inspectable way. If
+D exposes a framing corner case, Agda makes an invariant precise, or Idriç
+reveals that two values need different semantic types, the durable result should
+not be "the model noticed that while comparing the branches." The result should
+be a changed contract where appropriate, a new shared fixture or test, and a
+receipt showing how every implementation behaves on it.
+
+The language model still has a useful role in comparing implementations and
+proposing what to test. But the comparison is a **test generator**, not the
+final memory or authority. The repository keeps the lesson after the
+conversation ends, and a later model can inspect exactly which example caused
+the languages to disagree and whether the disagreement was resolved.
+
+This also makes repeated translation useful as a reliability technique rather
+than mere duplication. Each implementation becomes another instrument pointed
+at the same semantics, and discoveries made by any one of them can tighten the
+harness for all the others.
+
 ## "Green" should mean something specific
 
 One theme across all three projects is refusing to let vague success labels accumulate.
