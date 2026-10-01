@@ -53,6 +53,17 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 **Direction:** [Space age](space-age.md)
 
 
+## Low precision and honest error
+
+Real measurements rarely justify thousandths, much less millionths. Even Float16 often carries more precision than the inputs deserve. The extra headroom is useful when a calculation — especially multiplication, accumulation, linear algebra, or trigonometry — needs it; it is not a reason to invent precision in the measurements.
+
+Instead of collapsing everything into one anonymous ±ε, I want to keep different sources of error distinct: data-entry error, meter-reading error, didn't-see-it error, holding-it-upside-down error, ordinary engineering tolerance, and small angular or alignment tolerances that can cast a very long geometric shadow. Some of these are bounded numerical uncertainty. Some are discrete mistakes and should not be disguised as Gaussian noise.
+
+One experiment is to carry several symbolic ε's through the program rather than resolving them immediately, then bracket them wherever topology, order, continuity, sign, geometry, or a known physical bound gives useful information. Alongside that: definite interval data types with executable lower and upper bounds, starting with addition and subtraction and widening only as much as the operation requires.
+
+Then push both representations through purposefully complicated but definite linear algebra and trigonometry. Compare symbolic bounds, interval bounds, and a higher-precision reference. Look for where uncertainty grows, cancels, changes branch, is amplified by geometry, or becomes smaller than quantization.
+
+
 ##### Chatbot as build system
 
 We're used to packaging many builds into one APK, and even to accepting approximate interfaces (such as the JVM), because it's too much for one person to remember every machine architecture, every hardware sensor manual, or how every memory layout might pair with every register layout.
