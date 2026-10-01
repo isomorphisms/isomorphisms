@@ -40,6 +40,21 @@ Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droi
 **Homage to the OG Dane Dauger, an original gangster of real-time orbital visualization** — using a computational notebook and irreducible representations to get the spherical harmonics symbolically.
 
 
+## Working snippets
+
+### Florence Nightingale / Fourier Voice
+
+A Fourier/Wegert rendering driven by Florence Nightingale's 1890 recording.
+
+> “When I am no longer even a memory, just a name, I hope my voice may perpetuate … Florence Nightingale.”
+
+<video controls preload="metadata" width="360">
+  <source src="https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4" type="video/mp4">
+</video>
+
+[MP4](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Fourier Voice](https://github.com/isomorphismes/Fourier-sound)
+
+
 ## Projects
 
 **Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/dilapidated-shed/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
