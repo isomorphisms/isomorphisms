@@ -68,6 +68,14 @@ A Fourier/Wegert rendering driven by Florence Nightingale's 1890 recording.
 **Direction:** [Space age](space-age.md)
 
 
+## Where the damn password hiding lives
+
+Thanks to AI, I finally found where this stuff lives.
+
+- **Linux terminal password hiding:** the kernel TTY choke point is `drivers/tty/n_tty.c`. User-space programs control it through the terminal's `termios` `ECHO` flag: `stty -echo` hides typed input; `stty echo` turns terminal echo back on. Programs such as `passwd` or `sudo` can toggle `ECHO` themselves.
+- **Android password fields (`••••••••`):** AOSP implements the masking in `frameworks/base/core/java/android/text/method/PasswordTransformationMethod.java`. The separate "briefly show the character just typed" preference is `Settings.System.TEXT_SHOW_PASSWORD`, used through `TextKeyListener.java`.
+
+
 ## Low precision and honest error
 
 Real measurements rarely justify thousandths, much less millionths. Even Float16 often carries more precision than the inputs deserve. The extra headroom is useful when a calculation — especially multiplication, accumulation, linear algebra, or trigonometry — needs it; it is not a reason to invent precision in the measurements.
