@@ -1,5 +1,13 @@
 ## Installable releases
 
+### Spinor
+
+<!-- software-release:spinor:begin -->
+**Spinor 0.0.1-pre.1** — prerelease — [MIRO A1 APK](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-miro-a1-armeabi-v7a.apk) · [MIRO C67 APK](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-miro-c67-arm64-v8a.apk) · [Release notes and checksums](https://github.com/functorial-games/spinor/releases/tag/v0.0.1-pre.1) · [Source](https://github.com/functorial-games/spinor)
+<!-- software-release:spinor:end -->
+
+Interactive spinor / belt-trick playground: drag the central body through the 2π orientation return and continue to the 4π lift return. [Watch the deterministic 0 → 2π → 4π MP4](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
+
 ### Wegert
 
 <!-- software-release:wegert:begin -->
