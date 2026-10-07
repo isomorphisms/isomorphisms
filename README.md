@@ -8,6 +8,8 @@
 
 Interactive spinor / belt-trick playground: drag the central body through the 2π orientation return and continue to the 4π lift return. [Watch the deterministic 0 → 2π → 4π MP4](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
 
+**Credit:** Spinor is directly and substantially inspired by **Jason Hise's spin-½ / belt-trick / antitwister visualizations**. In particular, the central-object-plus-ribbons visual language and the use of continuous fiber deformation to make the 2π versus 4π distinction visible owe a clear pedagogical and visual debt to Hise's work. See [Hise's account of his mathematical-animation work](https://diff.wikimedia.org/2016/09/22/math-gifs/), [Entropy Games](https://entropygames.net/), and Spinor's [detailed attribution and provenance notes](https://github.com/functorial-games/spinor/blob/main/notes/jason-hise.md). The Spinor code is an independent implementation; the project does not claim Hise's original Maya/C++ source as its own.
+
 ### Wegert
 
 <!-- software-release:wegert:begin -->
