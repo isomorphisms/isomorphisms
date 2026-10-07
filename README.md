@@ -78,7 +78,7 @@ A Fourier/Wegert rendering driven by Florence Nightingale's 1890 recording.
 **Direction:** [Space age](space-age.md)
 
 
-## Where the damn password-hiding code lives
+## Where the password-hiding code lives
 
 Thanks to AI, I finally found where this stuff lives.
 
