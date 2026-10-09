@@ -58,7 +58,7 @@ Florence Nightingale's 1890 recording, rendered through Fourier/Wegert visuals. 
 
 **Languages:** [Icky C](icky-c.md) · [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Math keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
 
-**Systems:** [IB](https://github.com/isomorphisms/ib) · [Grease](https://github.com/dilapidated-shed/grease) · [Android NDK](https://github.com/isomorphisms/android-NDK) · [Cat Food](https://github.com/isomorphisms/catfood) · [FPGA grep](fpga-grep.md) · [Password dots](where-password-dots-live.md)
+**Systems:** [IB](https://github.com/isomorphisms/ib) · [Search design](semantic-operating-system.md) · [Grease](https://github.com/dilapidated-shed/grease) · [Android NDK](https://github.com/isomorphisms/android-NDK) · [Cat Food](https://github.com/isomorphisms/catfood) · [FPGA grep](fpga-grep.md) · [Password dots](where-password-dots-live.md)
 
 **AI-built code:** [ai-ci](https://github.com/isomorphisms/ai-ci) · [Cockswain](https://github.com/isomorphisms/coxswain) · [Kitchen](https://github.com/isomorphisms/kitchen) · [mbox](https://github.com/isomorphisms/mbox) · [What I check](reliable-vibe-coding.md)
 
