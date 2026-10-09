@@ -1,14 +1,20 @@
-## Installable releases
+# isomorphisms
+
+I build small, inspectable software for mathematical experiments, phone interfaces, compilers, and AI-assisted programming that can be checked rather than merely trusted.
+
+[Interactive mathematics](mathematics-games.md) · [Mathematical structure and verification](applying-highbrow-math.md) · [Readable notation](icky-c.md) · [Getting AI to behave](reliable-vibe-coding.md) · [Larger aims](space-age.md)
+
+## Apps, releases, and demonstrations
 
 ### Spinor
 
 <!-- software-release:spinor:begin -->
-**Spinor 0.0.1-pre.1** — prerelease — [MIRO A1 APK](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-miro-a1-armeabi-v7a.apk) · [MIRO C67 APK](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-miro-c67-arm64-v8a.apk) · [Release notes and checksums](https://github.com/functorial-games/spinor/releases/tag/v0.0.1-pre.1) · [Source](https://github.com/functorial-games/spinor)
+**Spinor 0.0.1-pre.1** — prerelease — [MIRO A1 APK](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-miro-a1-armeabi-v7a.apk) · [MIRO C67 APK](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-miro-c67-arm64-v8a.apk) · [Release notes and checksums](https://github.com/isomorphismes/spinor/releases/tag/v0.0.1-pre.1) · [Source](https://github.com/isomorphismes/spinor)
 <!-- software-release:spinor:end -->
 
-Interactive spinor / belt-trick playground: drag the central body through the 2π orientation return and continue to the 4π lift return. [Watch the deterministic 0 → 2π → 4π MP4](https://github.com/functorial-games/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
+Interactive spinor / belt-trick playground: drag the central body through the 2π orientation return and continue to the 4π lift return. [Watch the deterministic 0 → 2π → 4π MP4](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
 
-**Credit:** Spinor is directly and substantially inspired by **Jason Hise's spin-½ / belt-trick / antitwister visualizations**. In particular, the central-object-plus-ribbons visual language and the use of continuous fiber deformation to make the 2π versus 4π distinction visible owe a clear pedagogical and visual debt to Hise's work. See [Hise's account of his mathematical-animation work](https://diff.wikimedia.org/2016/09/22/math-gifs/), [Jason Hise on YouTube](https://www.youtube.com/channel/UCw5aOpkU7_uuL73-kVxdJIA), [Entropy Games](https://entropygames.net/), and Spinor's [detailed attribution and provenance notes](https://github.com/functorial-games/spinor/blob/main/notes/jason-hise.md). The Spinor code is an independent implementation; the project does not claim Hise's original Maya/C++ source as its own.
+**Credit:** Spinor is directly and substantially inspired by **Jason Hise's spin-½ / belt-trick / antitwister visualizations**. In particular, the central-object-plus-ribbons visual language and the use of continuous fiber deformation to make the 2π versus 4π distinction visible owe a clear pedagogical and visual debt to Hise's work. See [Hise's account of his mathematical-animation work](https://diff.wikimedia.org/2016/09/22/math-gifs/), [Jason Hise on YouTube](https://www.youtube.com/channel/UCw5aOpkU7_uuL73-kVxdJIA), [Entropy Games](https://entropygames.net/), and Spinor's [detailed attribution and provenance notes](https://github.com/isomorphismes/spinor/blob/main/notes/jason-hise.md). The Spinor code is an independent implementation; the project does not claim Hise's original Maya/C++ source as its own.
 
 ### Wegert
 
@@ -38,7 +44,7 @@ Native Android accelerometer path: a DEX-free ARMv7/Thumb app. [Sensor code](htt
 [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
 <!-- software-release:algebraic-variety-explorer:end -->
 
-Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission).
+Type a polynomial in `x`, `y`, and `z`; see its real zero set. [Demo MP4](media/algebraic-variety-explorer-demo.mp4) · [Build and F-Droid notes](https://github.com/isomorphismes/algebraic-variety-explorer-mobile#f-droid-submission).
 
 ![Algebraic Variety Explorer interaction demo](https://github.com/isomorphisms/isomorphisms/raw/refs/heads/main/media/algebraic-variety-explorer-demo-preview.gif)
 
@@ -58,22 +64,24 @@ A Fourier/Wegert rendering driven by Florence Nightingale's 1890 recording.
 
 > “When I am no longer even a memory, just a name, I hope my voice may perpetuate … Florence Nightingale.”
 
-<video controls preload="metadata" width="360">
-  <source src="https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4" type="video/mp4">
-</video>
+[Watch the Fourier-voice movie (MP4)](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Fourier Voice source](https://github.com/isomorphismes/Fourier-sound)
 
-[MP4](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Fourier Voice](https://github.com/isomorphismes/Fourier-sound)
+<!-- GitHub profile READMEs do not display HTML <video> players; retain the direct MP4 link. -->
 
 
 ## Projects
 
 **Readable notation (`← → λ ≠ ≟`):** [Icky C](icky-c.md) · [Idriç](https://github.com/isomorphisms/Idric) · [i-thon](https://github.com/dilapidated-shed/ithon) · [IR](https://github.com/isomorphisms/ir) · [Compact Math Keyboard](https://github.com/Ashtray-Archer/utilities-android-phone-user/tree/main/math-keyboard-sample)
 
+**Interactive and geometric mathematics:** [Mathematics games](mathematics-games.md) · [Coefficient Root Dance](https://github.com/isomorphismes/coefficient-root-dance) · [Coxeter groups](https://github.com/isomorphismes/coxeter) · [Indra's Pearls](https://github.com/isomorphismes/indras-pearls) · [Curve rendering / subpixels](https://github.com/isomorphisms/rough.framebuffer)
+
+**Topology, homotopy, and knot theory (working notes):** [VanKoughnett](https://github.com/isomorphisms/VanKoughnett) · [Goodwillie calculus](https://github.com/isomorphisms/goodwillie) · [Morava](https://github.com/isomorphisms/morava) · [Snaith](https://github.com/isomorphisms/snaith) · [Mapping class groups](https://github.com/isomorphisms/mapping-class) · [Kirby calculus](https://github.com/isomorphisms/kirby-calculus) · [Montesinos](https://github.com/isomorphisms/montesinos)
+
 **Search / editing:** [IB / Pensieve](https://github.com/isomorphisms/ib), an experimental browser and durable task workbench · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [Android NDK](https://github.com/isomorphisms/android-NDK), reusable DEX/JNI/NativeActivity/NDK and APK substrate · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/cockswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
+**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [Android NDK](https://github.com/isomorphisms/android-NDK), reusable DEX/JNI/NativeActivity/NDK and APK substrate · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/coxswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
 
-**Mathematics checks:** [Walnut & Burgundy verification](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [fulton](https://github.com/walnut-burgundy/fulton) · [tymoczko](https://github.com/walnut-burgundy/tymoczko)
+**Mathematics and verification:** [Walnut & Burgundy](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [Fulton](https://github.com/walnut-burgundy/fulton) · [Tymoczko](https://github.com/walnut-burgundy/tymoczko) · [Statistics and error propagation](statistics-econometrics-and-error-propagation.md)
 
 **Direction:** [Space age](space-age.md)
 
@@ -88,6 +96,8 @@ Thanks to AI, I finally found where this stuff lives.
 
 
 ## Low precision and honest error
+
+[More on statistics, econometrics, and error propagation](statistics-econometrics-and-error-propagation.md) · [Intervals and unknown-resolution conditions](https://github.com/dilapidated-shed/intervals.idr)
 
 Real measurements rarely justify thousandths, much less millionths. Even Float16 often carries more precision than the inputs deserve. The extra headroom is useful when a calculation — especially multiplication, accumulation, linear algebra, or trigonometry — needs it; it is not a reason to invent precision in the measurements.
 
@@ -124,7 +134,7 @@ The APK column measures the package on disk, not the uncompressed contents. ZIP 
 
 ## Getting AI to behave
 
-- **push forward:** [Cockswain](https://github.com/isomorphisms/cockswain) supervises agent work instead of treating one-shot generation as the finished product.
+- **push forward:** [Cockswain](https://github.com/isomorphisms/coxswain) supervises agent work instead of treating one-shot generation as the finished product.
 - **push back:** deterministic tests and [ai-ci](https://github.com/isomorphisms/ai-ci) turn failures into evidence and regressions.
 - **externalize the work:** [Kitchen](https://github.com/isomorphisms/kitchen) is the place where casual scripts and terminal instructions are prepared before they are served. Requirements, target assumptions, fixtures, aggressive cases, tests, exact script versions, and failure notes live in files instead of disappearing into conversational memory. That leaves a deterministic history: what program was actually written, what was tried, what failed, and what should become a regression test or an improvement to the generation/verification process.
 - **let implementations teach one another:** parallel versions in different languages should not only be compared inside a model's temporary context. Put the semantics, fixtures, and conformance cases outside the conversation and make every implementation run the same harness. [mbox](https://github.com/isomorphisms/mbox) does this with Idriç, D, Agda, and Idris: a discrepancy or invariant found through one branch becomes a shared regression that all the others must face. The durable artifact is the contract, fixture, test, and per-language result—not the model's memory of the comparison. [More detail](reliable-vibe-coding.md#let-implementations-teach-one-another).
