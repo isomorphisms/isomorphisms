@@ -265,3 +265,7 @@ The goal is not to force every project onto one representation.
 The goal is to know exactly which mathematical object we have, which carrier we chose, which equivalence relations are present, and what information each conversion preserves or destroys.
 
 That is the kind of structure a programming language ought to help us keep.
+
+## Further technical notes
+
+[Rotations from types to assembly](notes/rotations-types-to-assembly.md) · [High-dimensional retrieval and rotations](notes/multiply-indexed-retrieval.md)
