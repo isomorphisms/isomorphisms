@@ -180,3 +180,7 @@ symbolic planning
 Some of these may become powerful. Some may remain small utilities. Some may fail.
 
 The important part is that the computer can help test the ideas against real statistical and computational problems instead of leaving them as vague mathematical enthusiasm.
+
+## Further technical notes
+
+[Nested uncertainty and vehicle Jacobians](notes/uncertainty-and-vehicle-jacobians.md) · [Eisenbud and the econometrics question](notes/eisenbud-econometrics-and-geometry.md)
