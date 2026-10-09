@@ -492,3 +492,7 @@ But "this is how Unix did it" or "this is how shells have always parsed flags" i
 Keep what works.
 
 Fix what does not.
+
+## Further technical notes
+
+[Multiply indexed retrieval and geometric rotations](notes/multiply-indexed-retrieval.md)
