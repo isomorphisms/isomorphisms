@@ -123,7 +123,7 @@ econometric model
   → revised model
 ~~~
 
-Some parts can be represented in [Eisenbud–Harris notes](https://github.com/isomorphisms/Eisenbud-Harris), [Fulton work](https://github.com/walnut-burgundy/fulton), and [Econometrician](https://github.com/bl4ckb4ll/econometrician). [Algebraic Variety Explorer](https://github.com/isomorphismes/algebraic-variety-explorer-mobile) and [SURFER](https://github.com/isomorphismes/algebraic-variety-explorer-mobile) provide a path toward rotatable real zero sets.
+Some parts can be represented in [Eisenbud–Harris notes](https://github.com/walnut-burgundy/Eisenbud-Harris), [Fulton work](https://github.com/walnut-burgundy/fulton), and [Econometrician](https://github.com/bl4ckb4ll/econometrician). [Algebraic Variety Explorer](https://github.com/isomorphismes/algebraic-variety-explorer-mobile) and [SURFER](https://github.com/isomorphismes/algebraic-variety-explorer-mobile) provide a path toward rotatable real zero sets.
 
 A picture is evidence of a particular computed representation, not automatically proof that the chosen ideal is the right scientific model. Preserve equations, hypotheses, component identities, and source references with each render.
 
@@ -154,7 +154,7 @@ The experiments connect books, code, and a rotatable image. That is enough reaso
 ## Credit and source trail
 
 - **David Eisenbud**. [*Commutative Algebra with a View Toward Algebraic Geometry*](https://link.springer.com/book/10.1007/978-1-4612-5350-1), Springer, 1995. The starting point of this personal research thread.
-- **David Eisenbud and Joe Harris**. Work on algebraic geometry, schemes, and related methods informs the [Eisenbud–Harris repository](https://github.com/isomorphisms/Eisenbud-Harris). This note does not attribute Eisenbud's solo textbook to Harris.
+- **David Eisenbud and Joe Harris**. Work on algebraic geometry, schemes, and related methods informs the [Eisenbud–Harris repository](https://github.com/walnut-burgundy/Eisenbud-Harris). This note does not attribute Eisenbud's solo textbook to Harris.
 - **Mathias Drton, Bernd Sturmfels, Seth Sullivant**. [*Lectures on Algebraic Statistics*](https://link.springer.com/book/10.1007/978-3-7643-8905-5), 2009.
 - **Mathias Drton and Seth Sullivant**. [*Algebraic statistical models*](https://arxiv.org/abs/math/0703609), 2007.
 - **Mathias Drton, Bernd Sturmfels, Seth Sullivant**. [*Algebraic Factor Analysis: Tetrads, Pentads and Beyond*](https://arxiv.org/abs/math/0509390), 2005.
