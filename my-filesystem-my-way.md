@@ -21,3 +21,7 @@ A general-purpose filesystem is useful. So are ordinary files and directories. B
 That might mean an append arena for fast incoming data, several indexes over one body of data, an application-specific allocation table, or something else entirely.
 
 The storage layout is part of the program design.
+
+## Further technical notes
+
+[Multiply indexed retrieval](notes/multiply-indexed-retrieval.md) · [E5M3 and memory-layout experiments](notes/e5m3-memory-and-nano-optimization.md)

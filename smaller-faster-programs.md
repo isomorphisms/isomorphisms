@@ -142,3 +142,7 @@ The useful claim is narrower: removing unnecessary representation changes, runti
 The interesting part is that this does not have to conflict with readable source.
 
 The same language can aim upward toward meaningful mathematics and ordinary language while also aiming downward toward exact bytes and instructions.
+
+## Further technical notes
+
+[E5M3, memory channels, and nano-optimization](notes/e5m3-memory-and-nano-optimization.md) · [Controlling AI and compiler goals](notes/ai-control-and-compiler-goals.md)

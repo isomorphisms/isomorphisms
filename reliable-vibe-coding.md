@@ -378,3 +378,7 @@ human goal
 That is much closer to an actual software factory than "prompt until the code looks right."
 
 The point of these projects is to let the AI move quickly **without requiring the human to trust vibes**.
+
+## Further technical notes
+
+[Controlling AI from mathematical contracts to machine evidence](notes/ai-control-and-compiler-goals.md)
