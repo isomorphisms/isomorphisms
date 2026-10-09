@@ -79,20 +79,11 @@ A Fourier/Wegert rendering driven by Florence Nightingale's 1890 recording.
 
 **Search / editing:** [IB / Pensieve](https://github.com/isomorphisms/ib), an experimental browser and durable task workbench · [BM25, vector, and SVM-style retrieval](semantic-operating-system.md#search-should-not-be-one-box) · [Contextual find and replace](contextual-find-and-replace.md)
 
-**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [Android NDK](https://github.com/isomorphisms/android-NDK), reusable DEX/JNI/NativeActivity/NDK and APK substrate · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/coxswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md)
+**Systems / reliability:** [Grease](https://github.com/dilapidated-shed/grease), the Oils-derived shell · [Cat Food](https://github.com/isomorphisms/catfood), workbench provisioning and runtime delivery · [Android NDK](https://github.com/isomorphisms/android-NDK), reusable DEX/JNI/NativeActivity/NDK and APK substrate · [ai-ci](https://github.com/isomorphisms/ai-ci), shared verification and evidence gates · [Cockswain](https://github.com/isomorphisms/coxswain), agent-work supervision · [Small apps](apps-should-be-smaller-than-the-totality-of-all-russian-literature.md) · [FPGA grep](fpga-grep.md) · [Password dots and clipboard internals](where-password-dots-live.md)
 
 **Mathematics and verification:** [Walnut & Burgundy](applying-highbrow-math.md#make-the-mathematics-verify-the-program) · [Fulton](https://github.com/walnut-burgundy/fulton) · [Tymoczko](https://github.com/walnut-burgundy/tymoczko) · [Statistics and error propagation](statistics-econometrics-and-error-propagation.md)
 
 **Direction:** [Space age](space-age.md)
-
-
-## Where the password-hiding code lives
-
-Thanks to AI, I finally found where this stuff lives.
-
-- **Linux terminal password hiding:** the kernel TTY choke point is `drivers/tty/n_tty.c`. User-space programs control it through the terminal's `termios` `ECHO` flag: `stty -echo` hides typed input; `stty echo` turns terminal echo back on. Programs such as `passwd` or `sudo` can toggle `ECHO` themselves.
-- **Android password fields (`••••••••`):** AOSP implements the masking in `frameworks/base/core/java/android/text/method/PasswordTransformationMethod.java`. The separate "briefly show the character just typed" preference is `Settings.System.TEXT_SHOW_PASSWORD`, used through `TextKeyListener.java`.
-- **Android system clipboard / pasteboard:** the system service lives in AOSP at [`frameworks/base/services/core/java/com/android/server/clipboard/ClipboardService.java`](https://android.googlesource.com/platform/frameworks/base/+/HEAD/services/core/java/com/android/server/clipboard/ClipboardService.java). Its Binder interface is [`frameworks/base/core/java/android/content/IClipboard.aidl`](https://android.googlesource.com/platform/frameworks/base/+/HEAD/core/java/android/content/IClipboard.aidl). The current clip is managed by `system_server` as per-user `ClipData`; this service is where Android enforces clipboard reads/writes, access notifications, auto-clear, and related policy.
 
 
 ## Low precision and honest error
