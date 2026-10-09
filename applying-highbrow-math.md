@@ -57,3 +57,7 @@ mathematical object
 ~~~
 
 That gives Walnut & Burgundy a second role. It is not only a source of representations and visual ideas; it can supply the laws that downstream software is required to preserve. When a property is important enough and the representation is stable enough, the executable oracle can then become a candidate for stronger formal verification rather than treating “use a proof assistant” as the first step for every experiment.
+
+## Further technical notes
+
+[Eisenbud, econometrics, and geometry](notes/eisenbud-econometrics-and-geometry.md) · [Rotations from types to assembly](notes/rotations-types-to-assembly.md)
