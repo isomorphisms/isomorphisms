@@ -1,0 +1,7 @@
+# Where password dots (••••) and clipboard handling live
+
+Thanks to AI, I finally found where this stuff lives.
+
+- **Linux terminal password hiding:** the kernel TTY choke point is `drivers/tty/n_tty.c`. User-space programs control it through the terminal's `termios` `ECHO` flag: `stty -echo` hides typed input; `stty echo` turns terminal echo back on. Programs such as `passwd` or `sudo` can toggle `ECHO` themselves.
+- **Android password fields (`••••••••`):** AOSP implements the masking in `frameworks/base/core/java/android/text/method/PasswordTransformationMethod.java`. The separate "briefly show the character just typed" preference is `Settings.System.TEXT_SHOW_PASSWORD`, used through `TextKeyListener.java`.
+- **Android system clipboard / pasteboard:** the system service lives in AOSP at [`frameworks/base/services/core/java/com/android/server/clipboard/ClipboardService.java`](https://android.googlesource.com/platform/frameworks/base/+/HEAD/services/core/java/com/android/server/clipboard/ClipboardService.java). Its Binder interface is [`frameworks/base/core/java/android/content/IClipboard.aidl`](https://android.googlesource.com/platform/frameworks/base/+/HEAD/core/java/android/content/IClipboard.aidl). The current clip is managed by `system_server` as per-user `ClipData`; this service is where Android enforces clipboard reads/writes, access notifications, auto-clear, and related policy.
