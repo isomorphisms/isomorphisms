@@ -1,7 +1,6 @@
 # isomorphisms
 
 What I’m working on:
-- trying to tame the slop
 - the programming keyboard we always needed
 - programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
 - fun math interactions
@@ -9,6 +8,7 @@ What I’m working on:
 - playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
 - seeing if proper dimensional accounting can prevent a class of errors in CNC G-code
 - using LMs’ ability to translate to bootstrap insights into code quality
+- trying to tame the slop
 - focusing on readability above all else
 
 ## Programs
