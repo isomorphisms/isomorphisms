@@ -1,11 +1,14 @@
 # isomorphisms
 
-Making:
+What I’m working on:
 - the programming keyboard we always needed
 - programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
 - fun math interactions
 - a "pensieve" browser which saves what you *intend* to read, to disk
 - playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
+- seeing if proper dimensional accounting can prevent a class of errors in CNC G-code
+- using LMs’ ability to translate to bootstrap insights into code quality
+- focusing on readability above all else
 
 ## Programs
 
@@ -22,7 +25,7 @@ Thanks to **Jason Hise**. His [belt-trick and antitwister animations](https://di
 ### Wegert
 
 <!-- software-release:wegert:begin -->
-**Wegert Android test 0.1.50** — prerelease — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
+**Wegert Android test 0.1.50** — prerelease — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
 <!-- software-release:wegert:end -->
 
 Move zeros and poles. Watch the phase portrait change. [Video](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1).
