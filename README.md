@@ -1,6 +1,11 @@
 # isomorphisms
 
-I write mathematical programs. I also work on compilers and Android. I want to see the math and understand the machine.
+Making:
+- the programming keyboard we always needed
+- programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
+- fun math interactions
+- a "pensieve" browser which saves what you *intend* to read, to disk
+- playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
 
 ## Programs
 
