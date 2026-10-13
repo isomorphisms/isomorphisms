@@ -1,6 +1,7 @@
 # isomorphisms
 
 What I’m working on:
+- trying to tame the slop
 - the programming keyboard we always needed
 - programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
 - fun math interactions
