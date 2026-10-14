@@ -59,6 +59,10 @@ A DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/util
 
 Orbital visualization from spherical harmonics. Thanks to **Dean Dauger** for [Atom in a Box](https://daugerresearch.com/orbitals/mac.shtml). [Source](https://github.com/isomorphismes/pauli).
 
+Turntable of a fixed 2pₓ orbital using Pauli's native CPU renderer (camera motion, not orbital-state rotation). [Video](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1).
+
+[![Pauli 2pₓ orbital camera turntable](https://raw.githubusercontent.com/isomorphismes/pauli/main/media/pauli-2px-turntable-preview.gif)](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1)
+
 ### Fourier Voice
 
 Florence Nightingale's 1890 recording, rendered through Fourier/Wegert visuals. [Movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Source](https://github.com/isomorphismes/Fourier-sound).
