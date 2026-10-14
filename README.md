@@ -23,6 +23,8 @@ What I’m working on:
 
 Rotate through 2π, then 4π. [Video](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
 
+[![Spinor 0 → 2π → 4π animation](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo-preview.gif)](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4)
+
 Thanks to **Jason Hise**. His [belt-trick and antitwister animations](https://diff.wikimedia.org/2016/09/22/math-gifs/) inspired the ribbons. [Full credit](https://github.com/isomorphismes/spinor/blob/main/notes/jason-hise.md). The code is independent.
 
 ### Wegert
@@ -63,9 +65,9 @@ Turntable of a fixed 2pₓ orbital using Pauli's native CPU renderer (camera mot
 
 [![Pauli 2pₓ orbital camera turntable](https://raw.githubusercontent.com/isomorphismes/pauli/main/media/pauli-2px-turntable-preview.gif)](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1)
 
-### Fourier Voice
+### Fourier Voice / Florence Nightingale
 
-Florence Nightingale's 1890 recording, rendered through Fourier/Wegert visuals. [Movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Source](https://github.com/isomorphismes/Fourier-sound).
+**Writing the simplest programs:** microphone → Fourier mathematics → graphics, exploring the phone's hardware abstraction layer (HAL), tiny native executables, and a **no-libc** target. Today's source uses AAudio and libc—not direct access to the vendor HAL. Florence Nightingale's 1890 voice is a repeatable **offline** movie input, not a live microphone recording. [Movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Source](https://github.com/isomorphismes/Fourier-sound) · [Minimal microphone/HAL experiment](https://github.com/isomorphismes/Fourier-sound/blob/main/docs/minimal-microphone-hal.md).
 
 [![Florence Nightingale Fourier Voice animated preview](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice-preview.gif)](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4)
 
