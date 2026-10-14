@@ -6,6 +6,8 @@ What I’m working on:
 - fun math interactions
 - a "pensieve" browser which saves what you *intend* to read, to disk
 - playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
+- rewriting favorite cli tools to compile with a smaller tool chain, owned by me
+- hooking cli tools up to the rest of the operating system! McElroy told us to do this; the Plan9 team pushed everything-is-a-file further, but with a networking focus that's not so important to me. AOSP has a different goal set but can also be adapted.
 - seeing if proper dimensional accounting can prevent a class of errors in CNC G-code
 - using LMs’ ability to translate to bootstrap insights into code quality
 - trying to tame the slop
