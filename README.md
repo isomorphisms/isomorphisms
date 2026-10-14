@@ -39,6 +39,8 @@ Rotate through 2π, then 4π. [Video](https://github.com/isomorphismes/spinor/re
 **Wegert Android test 0.1.50** — prerelease — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
 <!-- software-release:wegert:end -->
 
+**Mathematical visualization: Elias Wegert.** This independently coded Android app explores complex functions with phase portraits, following Wegert's [*Visual Complex Functions: An Introduction with Phase Portraits*](https://doi.org/10.1007/978-3-0348-0180-5). The app does not claim to have originated his approach. Wegert and **Gunter Semmler**, later joined by **Pamela Gorkin and Ulrich Daepp**, produced the original [*Complex Beauties* calendars (2011–2024)](https://blogs.hrz.tu-freiberg.de/mathekalender/english/), including the [complete 2024 calendar (PDF)](https://www.dropbox.com/scl/fi/w1mi4oqfgcaxztgaheoex/calendar2024Eng_no_margins.pdf?dl=0&rlkey=eifi7vh63t2lgqpxn0e1adfv0).
+
 Move zeros and poles. Watch the phase portrait change. [Video](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1).
 
 [![Wegert demo](https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles-preview.gif)](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
