@@ -13,6 +13,12 @@ What I’m working on:
 - trying to tame the slop
 - focusing on readability above all else
 
+- validating names with vector models
+- kernel mods! there is no API anymore!
+- multiply indexing files with vectors
+- hacking assembly to make sure SVM is *really* easy
+- renaming things so they don't continue to be called what they aren't
+
 ## Programs
 
 ### Spinor
