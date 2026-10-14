@@ -53,6 +53,8 @@ Graph real zero sets in three variables. [Video](media/algebraic-variety-explore
 
 A DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [Replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4).
 
+[![Accelerometer sensor-data replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
+
 ### Pauli
 
 Orbital visualization from spherical harmonics. Thanks to **Dean Dauger** for [Atom in a Box](https://daugerresearch.com/orbitals/mac.shtml). [Source](https://github.com/isomorphismes/pauli).
@@ -60,6 +62,8 @@ Orbital visualization from spherical harmonics. Thanks to **Dean Dauger** for [A
 ### Fourier Voice
 
 Florence Nightingale's 1890 recording, rendered through Fourier/Wegert visuals. [Movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Source](https://github.com/isomorphismes/Fourier-sound).
+
+[![Florence Nightingale Fourier Voice animated preview](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice-preview.gif)](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4)
 
 ## Projects
 
