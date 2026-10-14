@@ -25,7 +25,7 @@ Rotate through 2π, then 4π. [Video](https://github.com/isomorphismes/spinor/re
 
 [![Spinor 0 → 2π → 4π animation](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo-preview.gif)](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4)
 
-Thanks to **Jason Hise**. His [belt-trick and antitwister animations](https://diff.wikimedia.org/2016/09/22/math-gifs/) inspired the ribbons. [Full credit](https://github.com/isomorphismes/spinor/blob/main/notes/jason-hise.md). The code is independent.
+**Visual construction: Jason Hise.** Spinor's rotating central body, **six attached belts/ribbons**, and their untwisting over a 720° turn closely follow Hise's original [six-belt *Belt Trick* animation](https://commons.wikimedia.org/wiki/File:Belt_Trick.ogv) and [96-strand *Antitwister*](https://commons.wikimedia.org/wiki/File:Antitwister.ogv). This is an independently coded implementation of **Hise's distinctive visualization**, not a claim to have invented it or the older mathematical belt trick. [Hise's explanation](https://diff.wikimedia.org/2016/09/22/math-gifs/) · [Entropy Games](https://entropygames.net/) · [Detailed attribution](https://github.com/isomorphismes/spinor/blob/main/notes/jason-hise.md).
 
 ### Wegert
 
@@ -42,6 +42,8 @@ Move zeros and poles. Watch the phase portrait change. [Video](https://github.co
 <!-- software-release:algebraic-variety-explorer:begin -->
 [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
 <!-- software-release:algebraic-variety-explorer:end -->
+
+**Original renderer: Christian Stussak.** This Android adaptation **reuses his Java `jsurf` ray tracer**, written for IMAGINARY's [SURFER](https://www.imaginary.org/program/surfer) at the Mathematisches Forschungsinstitut Oberwolfach. The ray-tracing engine and polynomial rendering were **Stussak's work**; this project supplies a phone interface and packaging, not a new renderer. [Original `jsurf` source](https://github.com/IMAGINARY/jsurf) · [Apache-2.0 attribution](https://github.com/isomorphismes/algebraic-variety-explorer-mobile/blob/surfer/NOTICE).
 
 Graph real zero sets in three variables. [Video](media/algebraic-variety-explorer-demo.mp4).
 
