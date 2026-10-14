@@ -12,7 +12,6 @@ What I’m working on:
 - using LMs’ ability to translate to bootstrap insights into code quality
 - trying to tame the slop
 - focusing on readability above all else
-
 - validating names with vector models
 - kernel mods! there is no API anymore!
 - multiply indexing files with vectors
