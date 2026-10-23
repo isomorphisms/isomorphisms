@@ -1,24 +1,5 @@
 # isomorphisms
 
-What I’m working on:
-- the programming keyboard we always needed
-- programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
-- fun math interactions
-- a "pensieve" browser which saves what you *intend* to read, to disk
-- playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
-- rewriting favorite cli tools to compile with a smaller tool chain, owned by me
-- hooking cli tools up to the rest of the operating system! McElroy told us to do this; the Plan9 team pushed everything-is-a-file further, but with a networking focus that's not so important to me. AOSP has a different goal set but can also be adapted.
-- seeing if proper dimensional accounting can prevent a class of errors in CNC G-code
-- using LMs’ ability to translate to bootstrap insights into code quality
-- trying to tame the slop
-- focusing on readability above all else
-- make programs small and fast
-- validating names with vector models
-- kernel mods! there is no API anymore!
-- multiply indexing files with vectors
-- hacking assembly to make sure SVM is *really* easy
-- renaming things so they don't continue to be called what they aren't
-
 ## Programs
 
 ### Spinor
@@ -80,6 +61,25 @@ Turntable of a fixed 2pₓ orbital using Pauli's native CPU renderer (camera mot
 **Writing the simplest programs:** microphone → Fourier mathematics → graphics, exploring the phone's hardware abstraction layer (HAL), tiny native executables, and a **no-libc** target. Today's source uses AAudio and libc—not direct access to the vendor HAL. Florence Nightingale's 1890 voice is a repeatable **offline** movie input, not a live microphone recording. [Movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Source](https://github.com/isomorphismes/Fourier-sound) · [Minimal microphone/HAL experiment](https://github.com/isomorphismes/Fourier-sound/blob/main/docs/minimal-microphone-hal.md).
 
 [![Florence Nightingale Fourier Voice animated preview](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice-preview.gif)](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4)
+
+## What I’m working on
+- the programming keyboard we always needed
+- programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
+- fun math interactions
+- a "pensieve" browser which saves what you *intend* to read, to disk
+- playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
+- rewriting favorite cli tools to compile with a smaller tool chain, owned by me
+- hooking cli tools up to the rest of the operating system! McElroy told us to do this; the Plan9 team pushed everything-is-a-file further, but with a networking focus that's not so important to me. AOSP has a different goal set but can also be adapted.
+- seeing if proper dimensional accounting can prevent a class of errors in CNC G-code
+- using LMs’ ability to translate to bootstrap insights into code quality
+- trying to tame the slop
+- focusing on readability above all else
+- make programs small and fast
+- validating names with vector models
+- kernel mods! there is no API anymore!
+- multiply indexing files with vectors
+- hacking assembly to make sure SVM is *really* easy
+- renaming things so they don't continue to be called what they aren't
 
 ## Projects
 
