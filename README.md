@@ -1,5 +1,7 @@
 # isomorphisms
 
+Programs, math experiments, and notes I work on for fun. Some are unfinished.
+
 ## Programs
 
 ### Spinor
@@ -8,11 +10,13 @@
 **Spinor 0.0.1-pre.1** — prerelease — [MIRO A1 APK](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-miro-a1-armeabi-v7a.apk) · [MIRO C67 APK](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-miro-c67-arm64-v8a.apk) · [Release notes and checksums](https://github.com/isomorphismes/spinor/releases/tag/v0.0.1-pre.1) · [Source](https://github.com/isomorphismes/spinor)
 <!-- software-release:spinor:end -->
 
-Rotate through 2π, then 4π. [Video](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
+**Newer test APKs:** [A1 and C67 builds, October 14](https://github.com/isomorphismes/spinor/actions/runs/38498203548).
+
+Turn through 2π, then 4π. [Watch the demonstration](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4).
 
 [![Spinor 0 → 2π → 4π animation](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo-preview.gif)](https://github.com/isomorphismes/spinor/releases/download/v0.0.1-pre.1/spinor-4pi-demo.mp4)
 
-**Visual construction: Jason Hise.** Spinor's rotating central body, **six attached belts/ribbons**, and their untwisting over a 720° turn closely follow Hise's original [six-belt *Belt Trick* animation](https://commons.wikimedia.org/wiki/File:Belt_Trick.ogv) and [96-strand *Antitwister*](https://commons.wikimedia.org/wiki/File:Antitwister.ogv). This is an independently coded implementation of **Hise's distinctive visualization**, not a claim to have invented it or the older mathematical belt trick. [Hise's explanation](https://diff.wikimedia.org/2016/09/22/math-gifs/) · [Entropy Games](https://entropygames.net/) · [Detailed attribution](https://github.com/isomorphismes/spinor/blob/main/notes/jason-hise.md).
+**Credit:** Jason Hise created the distinctive six-belt [*Belt Trick*](https://commons.wikimedia.org/wiki/File:Belt_Trick.ogv) and [*Antitwister*](https://commons.wikimedia.org/wiki/File:Antitwister.ogv) visualizations. This phone app implements that construction independently. [Full attribution](https://github.com/isomorphismes/spinor/blob/main/notes/jason-hise.md).
 
 ### Wegert
 
@@ -20,11 +24,13 @@ Rotate through 2π, then 4π. [Video](https://github.com/isomorphismes/spinor/re
 **Wegert Android test 0.1.50** — prerelease — [Download APK](https://github.com/isomorphismes/wegert/releases/download/v0.1.50/wegert-0.1.50.apk) · [Release notes and checksum](https://github.com/isomorphismes/wegert/releases/tag/v0.1.50) · [Source](https://github.com/isomorphismes/wegert)
 <!-- software-release:wegert:end -->
 
-**Mathematical visualization: Elias Wegert.** This independently coded Android app explores complex functions with phase portraits, following Wegert's [*Visual Complex Functions: An Introduction with Phase Portraits*](https://doi.org/10.1007/978-3-0348-0180-5). The app does not claim to have originated his approach. Wegert and **Gunter Semmler**, later joined by **Pamela Gorkin and Ulrich Daepp**, produced the original [*Complex Beauties* calendars (2011–2024)](https://blogs.hrz.tu-freiberg.de/mathekalender/english/), including the [complete 2024 calendar (PDF)](https://www.dropbox.com/scl/fi/w1mi4oqfgcaxztgaheoex/calendar2024Eng_no_margins.pdf?dl=0&rlkey=eifi7vh63t2lgqpxn0e1adfv0).
+**Newer test APK:** [October 20 build](https://github.com/isomorphismes/wegert/actions/runs/39354940971).
 
-Move zeros and poles. Watch the phase portrait change. [Video](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1).
+Add, move, and cancel zeros and poles; watch the complex-function portrait change. [Watch the demonstration](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1).
 
 [![Wegert demo](https://raw.githubusercontent.com/isomorphismes/wegert/main/rendered_images/add-and-drag-two-zeros-and-two-poles-preview.gif)](https://github.com/isomorphismes/wegert/blob/main/rendered_images/add-and-drag-two-zeros-and-two-poles.mp4?raw=1)
+
+**Credit:** Elias Wegert developed this phase-portrait approach. His [*Complex Beauties* calendars](https://blogs.hrz.tu-freiberg.de/mathekalender/english/) were made with Gunter Semmler, Pamela Gorkin, and Ulrich Daepp. This is a separate Android implementation. [Wegert's book](https://doi.org/10.1007/978-3-0348-0180-5).
 
 ### Algebraic Variety Explorer
 
@@ -32,11 +38,13 @@ Move zeros and poles. Watch the phase portrait change. [Video](https://github.co
 [Source](https://github.com/isomorphismes/algebraic-variety-explorer-mobile)
 <!-- software-release:algebraic-variety-explorer:end -->
 
-**Original renderer: Christian Stussak.** This Android adaptation **reuses his Java `jsurf` ray tracer**, written for IMAGINARY's [SURFER](https://www.imaginary.org/program/surfer) at the Mathematisches Forschungsinstitut Oberwolfach. The ray-tracing engine and polynomial rendering were **Stussak's work**; this project supplies a phone interface and packaging, not a new renderer. [Original `jsurf` source](https://github.com/IMAGINARY/jsurf) · [Apache-2.0 attribution](https://github.com/isomorphismes/algebraic-variety-explorer-mobile/blob/surfer/NOTICE).
+**Test APK:** [Signed October 21 build](https://github.com/isomorphismes/algebraic-variety-explorer-mobile/actions/runs/39601857637) (GitHub Actions artifact).
 
-Graph real zero sets in three variables. [Video](media/algebraic-variety-explorer-demo.mp4).
+Graph real zero sets in three variables. [Watch the demonstration](media/algebraic-variety-explorer-demo.mp4).
 
 [![Algebraic Variety Explorer demo](media/algebraic-variety-explorer-demo-preview.gif)](media/algebraic-variety-explorer-demo.mp4)
+
+**Credit:** Christian Stussak wrote the original Java `jsurf` ray tracer for [IMAGINARY's SURFER](https://www.imaginary.org/program/surfer). This project adapts his renderer for Android with touch controls and packaging. [Original source](https://github.com/IMAGINARY/jsurf) · [License and credits](https://github.com/isomorphismes/algebraic-variety-explorer-mobile/blob/surfer/NOTICE).
 
 ### Accelerometer
 
@@ -44,42 +52,40 @@ Graph real zero sets in three variables. [Video](media/algebraic-variety-explore
 **Accelerometer native 0.2.0** — [Download APK](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0.apk) · [Release notes and provenance](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/tag/accelerometer-native-v0.2.0) · [Source](https://github.com/Ashtray-Archer/utilities-android-phone-user)
 <!-- software-release:accelerometer:end -->
 
-A DEX-free ARMv7/Thumb app. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [Replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4).
+**Newer test APKs:** [October 9 build](https://github.com/Ashtray-Archer/utilities-android-phone-user/actions/runs/37901235915).
+
+A small native ARMv7/Thumb phone sensor app, without application DEX. [Sensor code](https://github.com/Ashtray-Archer/utilities-android-phone-user/blob/main/accelerometer/android/android_accelerometer.c) · [Watch the replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4).
 
 [![Accelerometer sensor-data replay](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.gif)](https://github.com/Ashtray-Archer/utilities-android-phone-user/releases/download/accelerometer-native-v0.2.0/accelerometer-native-v0.2.0-replay.mp4)
 
 ### Pauli
 
-Orbital visualization from spherical harmonics. Thanks to **Dean Dauger** for [Atom in a Box](https://daugerresearch.com/orbitals/mac.shtml). [Source](https://github.com/isomorphismes/pauli).
+**Earlier test APK:** [October 9 build](https://github.com/isomorphismes/pauli/actions/runs/37887818537). [Source](https://github.com/isomorphismes/pauli).
 
-Turntable of a fixed 2pₓ orbital using Pauli's native CPU renderer (camera motion, not orbital-state rotation). [Video](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1).
+A camera moving around a hydrogen 2pₓ orbital, rendered with this project's native CPU code. Inspired by Dean Dauger's [*Atom in a Box*](https://daugerresearch.com/orbitals/mac.shtml). [Watch the demonstration](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1).
 
 [![Pauli 2pₓ orbital camera turntable](https://raw.githubusercontent.com/isomorphismes/pauli/main/media/pauli-2px-turntable-preview.gif)](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1)
 
 ### Fourier Voice / Florence Nightingale
 
-**Writing the simplest programs:** microphone → Fourier mathematics → graphics, exploring the phone's hardware abstraction layer (HAL), tiny native executables, and a **no-libc** target. Today's source uses AAudio and libc—not direct access to the vendor HAL. Florence Nightingale's 1890 voice is a repeatable **offline** movie input, not a live microphone recording. [Movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4) · [Source](https://github.com/isomorphismes/Fourier-sound) · [Minimal microphone/HAL experiment](https://github.com/isomorphismes/Fourier-sound/blob/main/docs/minimal-microphone-hal.md).
+**Test APKs:** [October 14 main-branch builds](https://github.com/isomorphismes/Fourier-sound/actions/runs/38494169306) (GitHub Actions artifacts). [Source](https://github.com/isomorphismes/Fourier-sound).
+
+A microphone → Fourier mathematics → picture experiment. This movie uses an offline recording of Florence Nightingale, rather than a live microphone. The Android program currently uses AAudio and libc; direct hardware access remains experimental. [Watch the movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4).
 
 [![Florence Nightingale Fourier Voice animated preview](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice-preview.gif)](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4)
 
-## What I’m working on
-- the programming keyboard we always needed
-- programs that run on the cheapest phone available on Amazon: the $60 Miro.A1
-- fun math interactions
-- a "pensieve" browser which saves what you *intend* to read, to disk
-- playing with compilers, assembly, and language front-ends. Can we get rid of API’s entirely in this new world?
-- rewriting favorite cli tools to compile with a smaller tool chain, owned by me
-- hooking cli tools up to the rest of the operating system! McElroy told us to do this; the Plan9 team pushed everything-is-a-file further, but with a networking focus that's not so important to me. AOSP has a different goal set but can also be adapted.
-- seeing if proper dimensional accounting can prevent a class of errors in CNC G-code
-- using LMs’ ability to translate to bootstrap insights into code quality
-- trying to tame the slop
-- focusing on readability above all else
-- make programs small and fast
-- validating names with vector models
-- kernel mods! there is no API anymore!
-- multiply indexing files with vectors
-- hacking assembly to make sure SVM is *really* easy
-- renaming things so they don't continue to be called what they aren't
+GitHub Actions links lead to temporary test APKs under **Artifacts**; downloading them may require signing in. The release APK links above are permanent, but some are older than the source.
+
+## Organizations
+
+This workspace is *lightly organized*, not stringently tidy. These organizations keep things in at least some boxes:
+
+- [Ashtray & Archer](https://github.com/Ashtray-Archer) — command-line utilities.
+- [House of Government](https://github.com/house-of-government) — data and forms.
+- [Isomorphismes](https://github.com/isomorphismes) — mathematical *interactions*, like the moving pictures in Harry Potter. I want every video demo to be playable and every playable demo to have a passive video. Most of the time people just watch; sometimes they want to take control. And when the controls are unfamiliar, a demonstration helps.
+- [Fuego Ironworks](https://github.com/fuego-ironworks) — an LLM training gym.
+- [Dilapidated Shed](https://github.com/dilapidated-shed) — projects being worked on.
+- [IB Pensieve](https://github.com/ib-pensieve) — a web browser of my own design ([IB source](https://github.com/isomorphisms/ib)).
 
 ## Projects
 
