@@ -60,7 +60,7 @@ A small native ARMv7/Thumb phone sensor app, without application DEX. [Sensor co
 
 ### Pauli
 
-**Earlier test APK:** [October 9 successful build](https://github.com/isomorphismes/pauli/actions/runs/37887818537) (the newer October 19 Android build is blocked). [Source](https://github.com/isomorphismes/pauli).
+**Earlier test APK:** [October 9 build](https://github.com/isomorphismes/pauli/actions/runs/37887818537). [Source](https://github.com/isomorphismes/pauli).
 
 A camera moving around a hydrogen 2pₓ orbital, rendered with this project's native CPU code. Inspired by Dean Dauger's [*Atom in a Box*](https://daugerresearch.com/orbitals/mac.shtml). [Watch the demonstration](https://github.com/isomorphismes/pauli/blob/main/media/pauli-2px-turntable.mp4?raw=1).
 
@@ -73,6 +73,8 @@ A camera moving around a hydrogen 2pₓ orbital, rendered with this project's na
 A microphone → Fourier mathematics → picture experiment. This movie uses an offline recording of Florence Nightingale, rather than a live microphone. The Android program currently uses AAudio and libc; direct hardware access remains experimental. [Watch the movie](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4).
 
 [![Florence Nightingale Fourier Voice animated preview](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice-preview.gif)](https://raw.githubusercontent.com/isomorphismes/Fourier-sound/refs/heads/experiments/nightingale-fourier-movie/media/florence-nightingale-fourier-voice.mp4)
+
+GitHub Actions links lead to temporary test APKs under **Artifacts**; downloading them may require signing in. The release APK links above are permanent, but some are older than the source.
 
 ## Organizations
 
