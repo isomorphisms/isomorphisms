@@ -1,6 +1,12 @@
-# isomorphisms
+My repos include both deeper-level experiments rethinking overall system architecture (in particular crossing the GCC divide at will), and fun little runnable games, usually made to illustrate and share mathematical experiences which used to be hidden to all but PhD students.
 
-Programs, math experiments, and notes I work on for fun. Some are unfinished.
+## Lower-level ideas
+
+**Crossing compiler boundaries.** [ICK](https://github.com/isomorphisms/ICK) is a GCC-derived C compiler; [Idriç](https://github.com/isomorphisms/Idric) experiments with other routes, including [direct DEX output](https://github.com/isomorphisms/android-NDK/tree/main/dex) for Android ART. I want to know exactly *where* a compiler decides how to lower a program, how to inspect that decision, and how to change it.
+
+**Readable machine operations.** [English Major C](https://github.com/isomorphisms/English-major-C) describes individual machine instructions in precise, complete English sentences: registers, memory, branches, the execution index, and what each operation changes. The aim is inspectability by natural-language readers, human or digital, not another opaque layer. Its first English-to-ARM Thumb compiler is a deliberately small experiment, not a complete machine-language implementation.
+
+**DEX micro-optimizations.** I'm exploring where reusable immutable data belongs: perhaps directly in DEX, perhaps in native read-only storage or separate assets. Colour tables, tries for text or URL matching, and other shared structures offer small experiments in avoiding repeated parsing or construction. The important questions are what ART actually does, where the choice is made, and whether measurement shows any speed or memory benefit.
 
 ## Programs
 
