@@ -8,7 +8,7 @@ My repos include both deeper-level experiments rethinking overall system archite
 
 **DEX micro-optimizations.** I'm exploring where reusable immutable data belongs: perhaps directly in DEX, perhaps in native read-only storage or separate assets. Colour tables, tries for text or URL matching, and other shared structures offer small experiments in avoiding repeated parsing or construction. The important questions are what ART actually does, where the choice is made, and whether measurement shows any speed or memory benefit.
 
-## Programs
+## runnable programs
 
 ### Spinor
 
