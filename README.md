@@ -1,8 +1,4 @@
-# isomorphisms
-
-Programs, math experiments, and notes I work on for fun. Some are unfinished.
-
-## Programs
+## runnable programs
 
 ### Spinor
 
